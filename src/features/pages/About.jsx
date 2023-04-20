@@ -2,7 +2,7 @@ import { Box, Flex, Grid, GridItem, Heading, Image, Text } from '@chakra-ui/reac
 import React from 'react'
 import swv from '../../assets/Image_02.jpg'
 import Nickfest from '../../assets/Image_03.jpg'
-import AboutHeader from '../../assets/Glen21-Header-01.jpg'
+import AboutHeader from '../../assets/Glen21_Header.jpg'
 
 const About = () => {
   return (

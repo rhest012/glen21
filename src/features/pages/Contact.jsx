@@ -1,7 +1,7 @@
 import React from 'react'
-import AboutHeader from '../../assets/Glen21-Header-01.jpg'
+import ContactHeader from '../../assets/Glen21_Header.jpg'
 import { Box, Flex, FormControl, Grid, GridItem, HStack, Heading, Image, Input, Stack, Text, Textarea } from '@chakra-ui/react'
-import BasJhb from '../../assets/Bas_JHB.jpg'
+import ContactImage from '../../assets/Crowd_2.jpg'
 import { FaTwitter, FaFacebookF, FaInstagram } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -22,7 +22,9 @@ const Contact = () => {
     <Flex 
         width="100%"
         height="31vh"
-        backgroundImage= {AboutHeader}
+        backgroundImage= {ContactHeader}
+        backgroundPosition="center"
+        backgroundSize="contain"
         paddingX="2rem"
         alignItems="center"
     >
@@ -42,7 +44,7 @@ const Contact = () => {
                     borderRight="1px solid #000"
                 />
                 <Image
-                    src={BasJhb}
+                    src={ContactImage}
                     margin="auto"
                     height="375px"
                     width="600px"

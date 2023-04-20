@@ -33,6 +33,7 @@ const UpcomingEventsTile = () => {
       const MotionFlex = motion(Flex);
       const MotionImage = motion(Image);
       const MotionHeading = motion(Heading);
+      const MotionBox = motion(Box);
       const { ref, inView } = useInView();
 
       const containerVariants = {
@@ -88,8 +89,35 @@ const UpcomingEventsTile = () => {
           transition: {delay: 0.5, duration: 1.2}
         }
       }
-      
-      
+
+      const borderTopVariants = {
+        hidden: {
+          opacity: 0,
+          y: -20,
+          x:-20
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          transition: {delay: 1, duration: 1}
+        }
+      }
+
+      const borderBottomVariants = {
+        hidden: {
+          opacity: 0,
+          y: 20,
+          x:20
+        },
+        visible: {
+          opacity: 1,
+          y: 0,
+          x: 0,
+          transition: {delay: 1, duration: 1}
+        }
+      }
+       
      
   return (
     <Box paddingX="2rem" marginY="6rem" ref={ref}>
@@ -109,8 +137,8 @@ const UpcomingEventsTile = () => {
             <Link 
               variants={containerVariants}
               whileHover='hover'
-              as={ReachLink}  
-              to="/tamia" 
+              isExternal 
+              href="https://www.ticketpros.co.za/portal/web/index.php/parent_event/1915f22b-8cf5-c5c3-9449-642286c5cad5" 
               _hover={{
                 textDecorate: "none",
               }}>
@@ -119,7 +147,12 @@ const UpcomingEventsTile = () => {
                 variants={containerVariants}
                 whileHover="hover"
               >
-                <Box sx={topLeftBorder}/>
+                <MotionBox 
+                  sx={topLeftBorder}
+                  variants={borderTopVariants}
+                  initial="hidden"
+                  animate="visible"
+                />
                   <Flex flexDirection="column" paddingX="1rem" marginY="-3.5rem">
                     <MotionImage
                       src={TamiaSquare}
@@ -146,18 +179,23 @@ const UpcomingEventsTile = () => {
                         initial="hidden"
                         animate="visible"
                       >
-                        4-9 July
+                        Purchase Tickets
                       </MotionHeading>
                     </Flex>
                   </Flex>
-                <Flex sx={bottomRightBorder}/>
+                <MotionFlex 
+                  sx={bottomRightBorder} 
+                  variants={borderBottomVariants}
+                  initial="hidden"
+                  animate="visible"/>
+                
               </MotionFlex>
             </Link>
           </GridItem>
           <GridItem width="100%">
           <Link 
-              as={ReachLink}  
-              to="/boys" 
+              isExternal 
+              href="https://www.ticketpros.co.za/portal/web/index.php/parent_event/810aa03b-d57e-d4eb-10a4-63fe581c39ac?sort_order=A-Z&category=music&province=&from=&to=" 
               _hover={{
                 textDecorate: "none",
               }}>
@@ -166,7 +204,13 @@ const UpcomingEventsTile = () => {
                 variants={containerVariants}
                 whileHover="hover"
               >
-                <Box sx={topLeftBorder}/>
+                <MotionBox 
+                  sx={topLeftBorder}
+                  variants={borderTopVariants}
+                  initial="hidden"
+                  animate="visible"
+
+                />
                   <Flex flexDirection="column" paddingX="1rem" marginY="-3.5rem">
                     <MotionImage
                       src={BoysIIMenSquare}
@@ -192,11 +236,16 @@ const UpcomingEventsTile = () => {
                         initial="hidden"
                         animate="visible"
                       >
-                        31 Oct - 5 Nov
+                        Purchase Tickets
                       </MotionHeading>
                     </Flex>
                   </Flex>
-                <Flex sx={bottomRightBorder}/>
+                <MotionFlex 
+                  sx={bottomRightBorder}
+                  variants={borderBottomVariants}
+                  initial="hidden"
+                  animate="visible"
+                />
               </MotionFlex>
             </Link>
           </GridItem>

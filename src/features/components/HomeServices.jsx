@@ -1,5 +1,5 @@
 import { Box, Flex, Text, Heading } from '@chakra-ui/react'
-import serviceBackground from "../../assets/Services_Background.jpg"
+import serviceBackground from "../../assets/Crowd_1.jpg"
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 import Underline from '../../assets/border.svg'
