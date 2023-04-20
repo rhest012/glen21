@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Text } from '@chakra-ui/react'
-import BoysiiMen from '../../assets/Boyz2Men_Cover.jpg'
-
+import TamiaImage from '../../assets/Tamia_Header.jpg'
 import React from 'react'
 
 const BoysIIMen = () => {
@@ -8,11 +7,11 @@ const BoysIIMen = () => {
         fontSize: "1rem"
     }
   return (
-    <Box marginTop="2rem" height="91vh">
+    <Box marginTop="2rem" height="91vh" overflow="scroll">
     <Flex marginX="2rem">
         <Flex width="70%" flexDir="column" gap="1rem" borderRight="1px solid #000" paddingRight="2rem" paddingY="1rem" height="260px" >     
             <Heading variant="h1" textAlign="right">
-                Boys II Men South <br/>Africa Tour
+                Tamia Live<br/> in South Africa
             </Heading>
             <Text variant="p" textAlign="right">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit sagittis diam et bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque quis scelerisque libero. Aenean metus tortor, fringilla quis odio vitae, pretium egestas lectus.
@@ -23,10 +22,10 @@ const BoysIIMen = () => {
                 <Box paddingRight="0.5rem">
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            31 Oct
+                            4 July
                         </Heading>
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            Grand Arena
+                            Grand West
                         </Heading>
                         <Text variant="p" as="p">Cape Town</Text>
                     </Flex>
@@ -34,12 +33,12 @@ const BoysIIMen = () => {
                 <Box paddingLeft="0.5rem">
                     <Flex  justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            2 November
+                            7 July 
                         </Heading>
                         <Heading variant="h6" as="h6" sx={venueStyling} textAlign="right">
-                            Time Square
+                            Durban ICC
                         </Heading>
-                        <Text variant="p" as="p" textAlign="right">Pretoria</Text>
+                        <Text variant="p" as="p" textAlign="right">Durban</Text>
                     </Flex>
                 </Box>
             </Flex>
@@ -47,30 +46,29 @@ const BoysIIMen = () => {
                 <Box paddingRight="0.5rem">
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            4 November
+                            8 July
                         </Heading>
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            Suncity Superbowl
+                            Time Square
                         </Heading>
-                        <Text variant="p" as="p">Sun City</Text>
+                        <Text variant="p" as="p">Pretoria</Text>
                     </Flex>
                 </Box>
                 <Box paddingLeft="0.5rem">
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            31 Oct
+                            9 July
                         </Heading>
                         <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            Durban ICC
+                            Time Square
                         </Heading>
-                        <Text variant="p" as="p" textAlign="right">Durban</Text>
+                        <Text variant="p" as="p" textAlign="right">Pretoria</Text>
                     </Flex>
                 </Box>
             </Flex>
             <Flex>
-                
                 <Link 
-                    href='https://www.ticketpros.co.za/portal/web/index.php/parent_event/810aa03b-d57e-d4eb-10a4-63fe581c39ac?sort_order=A-Z&category=music&province=&from=&to=' 
+                    href='https://www.ticketpros.co.za/portal/web/index.php/parent_event/1915f22b-8cf5-c5c3-9449-642286c5cad5' 
                     isExternal
                     textAlign="center"
                     fontWeight="600" 
@@ -94,7 +92,8 @@ const BoysIIMen = () => {
         <Image
             marginTop="2rem"
             width="100%"
-            src={BoysiiMen}
+            height="400px"
+            src={TamiaImage}
         />
     </Box>
   )

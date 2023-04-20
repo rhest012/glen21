@@ -1,5 +1,4 @@
 import { extendTheme } from "@chakra-ui/react";
-import { color } from "framer-motion";
 
 const theme = extendTheme ({
     fonts : {
@@ -62,7 +61,7 @@ const theme = extendTheme ({
             }
           }
         },
-      Button : {
+      Link : {
         variants: {
           btn: {
             background: "#000",

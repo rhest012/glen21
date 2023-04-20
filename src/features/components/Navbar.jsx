@@ -20,13 +20,11 @@ const Navbar = () => {
         <NavbarInnerContainer>
             <LeftContainer>
                 <NavbarLink to="/">Home</NavbarLink>
-                <NavbarLink to="/about">About</NavbarLink>
             </LeftContainer>
             <CenterContainer>
                 <Logo src={Glen21Logo}></Logo>
             </CenterContainer>
             <RightContainer>
-                <NavbarLink to="/previous-shows">Previous Shows</NavbarLink>
                 <NavbarLink to="/contact">Contact</NavbarLink>
                 <MobileMenuButton onClick={() => {
                 setNavBarOpener((curr) => !curr);
