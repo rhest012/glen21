@@ -162,14 +162,13 @@ const Contact = () => {
       }
 
 
-
   return (
    <>
     <MotionFlex 
         width="100%"
-        height={{ sm:"20vh", md:"20vh", lg:"31vh", xl:"31vh" }}
+        height={{ base:"18vh", sm:"20vh", md:"20vh", lg:"31vh", xl:"31vh" }}
         backgroundImage= {ContactHeader}
-        backgroundPosition={{ base:"left center",  md:"left center", lg:"center", xl:"center" }}
+        backgroundPosition={{ base:"left center", sm:"left center",  md:"left center", lg:"center", xl:"center" }}
         backgroundSize="cover"
         paddingX="2rem"
         alignItems="center"
@@ -179,7 +178,8 @@ const Contact = () => {
         exit="exit"
     >
         <MotionHeading 
-            variant="h1" 
+            fontSize="3.81rem"
+            textAlign={{base:"center", sm:"left", md:"left", lg:"left", x:"lg"}} 
             as="h1"
             color="#fff"
             variants={pageHeadingVariant}
@@ -190,7 +190,7 @@ const Contact = () => {
             Contact
         </MotionHeading>
     </MotionFlex>
-    <Grid gridTemplateColumns={{ sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}} width="100%" height="60vh"> 
+    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}} width="100%" height="60vh"> 
         <GridItem>
             <Flex flexDirection="column" justifyContent="center" width="100%">
                 <MotionBox
@@ -287,21 +287,22 @@ const Contact = () => {
                     />    
                 </Stack> */}
                 
-                <Flex flexDirection={{sm:"column", md:"column", lg:"row", xl:"row"}} gap={{sm:"1rem", md:"1rem", lg:"1rem"}} justifyContent={{ lg:"space-between", xl:"space-between"}}>
+                <Flex flexDirection={{ base:"column", sm:"column", md:"column", lg:"row", xl:"row"}} gap={{base:"1rem", sm:"1rem", md:"1rem", lg:"1rem"}} justifyContent={{ lg:"space-between", xl:"space-between"}}>
                     <MotionText 
                         variant="p"
                         variants={headingVariants}
                         initial="hidden"
                         animate="visible"
                         exit="exit"
+                        textAlign={{ base:"center", sm:"center", md:"center", lg:"left", xl:"left"}}
                     >
-                        Building 2, 4 Karen Str, Bryanston | + 27 87 805 9023
+                        Building 2, 4 Karen Str, Bryanston | +27 87 805 9023
                     </MotionText>
                     <MotionFlex 
                         gap="2rem" 
-                        justifyContent={{ sm:"space-between", md:"space-between", lg:"flex-end", xl:"flex-end"}}
-                        paddingTop={{ sm:"1rem", md:"1rem", lg:"0", xl:"0" }}
-                        paddingBottom={{ sm:"1.5rem", md:"1.5rem", lg:"0", xl:"0" }}
+                        justifyContent={{ base:"space-between", sm:"space-between", md:"space-between", lg:"flex-end", xl:"flex-end"}}
+                        paddingTop={{base:"1rem", sm:"1rem", md:"1rem", lg:"0", xl:"0" }}
+                        paddingBottom={{ base:"1rem", sm:"1.5rem", md:"1.5rem", lg:"0", xl:"0" }}
                         variants={textVariant}
                         initial="hidden"
                         animate="visible"
@@ -315,7 +316,7 @@ const Contact = () => {
                         <Link isExternal href="https://www.facebook.com/glen21ent/">
                             <FaTwitter fontSize="1.25rem"/>
                         </Link>
-                        <Link isExternal href="mailto:glen21.com">
+                        <Link isExternal href="mailto:info@glen21.com">
                             <FaEnvelope fontSize="1.25rem"/>
                         </Link>
                     </MotionFlex>

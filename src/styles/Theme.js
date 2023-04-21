@@ -10,35 +10,35 @@ const theme = extendTheme ({
           variants: {
             h1: {
               fontWeight: 700,
-              fontSize: "3.81rem",
+              fontSize: { base:"3.81rem", md:"3.81rem", lg:"3.81rem", xl:"3.81rem" },
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               
             },
             h2: {
               fontWeight: 700,
-              fontSize: "3.05rem",
+              fontSize: { base:"2.44rem", md:"3.05rem", lg:"3.05rem", xl:"3.05rem"} ,
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               
             },
             h3: {
               fontWeight: 700,
-              fontSize: "2.44rem",
+              fontSize: { base:"1.95rem", md:"2.44rem", lg:"2.44rem", xl:"2.44rem"},
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               
             },
             h4: {
               fontWeight: 700,
-              fontSize: "1.95rem",
+              fontSize: { base:"1.56rem",  md:"1.95rem", lg:"1.95rem", xl:"1.95rem"},
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               marginBottom: "1rem"
             },
             h5: {
               fontWeight: 700,
-              fontSize: "1.56rem",
+              fontSize: { base:"1.25rem",  md:"1.56rem", lg:"1.56rem", xl:"1.56rem"},
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               
@@ -57,7 +57,6 @@ const theme = extendTheme ({
             p:{
               fontWeight: 300,
               fontSize: "1rem",
-              
             }
           }
         },

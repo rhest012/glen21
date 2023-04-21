@@ -25,7 +25,7 @@ const UpcomingEventsTile = () => {
       const bottomRightBorder = {
         marginLeft:{lg:"80%", xl:"87%"},
         marginTop:"-4%",
-        display: {sm:"none", md:"none", lg:"block", xl:"block"},
+        display: { base:"none", sm:"none", md:"none", lg:"block", xl:"block"},
         position:"relative",
         height:"70px",
         width:"70px",
@@ -142,7 +142,7 @@ const UpcomingEventsTile = () => {
           Upcoming Shows
         </MotionHeading>
         <Grid gridTemplateColumns={{ base:"100%", md: "100%", lg:"50% 50%", xl:"50% 50%"}}>
-          <GridItem width="100%" marginBottom={{base:"2rem", md:"2rem", lg:"0", xl:"0" }}>
+          <GridItem width="100%" marginBottom={{base:"2.5rem", md:"2.5rem", lg:"0", xl:"0" }}>
             <Link 
               variants={containerVariants}
               whileHover='hover'
@@ -155,7 +155,7 @@ const UpcomingEventsTile = () => {
                 sx={singleEventContainer}
                 variants={containerVariants}
                 whileHover="hover"
-                marginBottom={{sm:"2.5rem", md:"2.5rem", lg:"0", xl:"0"}}
+                marginBottom={{base:"1.25rem", sm:"2.5rem", md:"2.5rem", lg:"0", xl:"0"}}
               >
                 <MotionBox 
                   sx={topLeftBorder}
@@ -178,7 +178,7 @@ const UpcomingEventsTile = () => {
                         variants={showNameVariants}
                         initial="hidden"
                         animate="visible"
-                        display={{sm:"none", md:"none", lg:"block", xl:"block"}}
+                        display={{base:"none", sm:"none", md:"none", lg:"block", xl:"block"}}
                       >
                         Tamia Live In SA
                       </MotionHeading>
@@ -235,7 +235,7 @@ const UpcomingEventsTile = () => {
                         variants={showNameVariants}
                         initial="hidden"
                         animate="visible"
-                        display={{sm:"none", md:"none", lg:"block", xl:"block"}}
+                        display={{base:"none", sm:"none", md:"none", lg:"block", xl:"block"}}
                       >
                         Boys II Men SA Tour
                       </MotionHeading>

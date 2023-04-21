@@ -84,11 +84,11 @@ const HomeAbout = () => {
     }
   }
   return (
-    <Box ref={ref} marginY="8rem" marginX={{sm:"1rem", md:"1rem"}}>
-    <Grid gridTemplateColumns={{ sm:"100%", md:"100%", lg:"50% 50%",  xl:"50% 50%"}}>
+    <Box ref={ref} marginY="8rem" marginX={{ base:"0.25rem", sm:"1rem", md:"1rem"}}>
+    <Grid gridTemplateColumns={{ base:"100", sm:"100%", md:"100%", lg:"50% 50%",  xl:"50% 50%"}}>
     <GridItem height="100%"> 
         <Flex height="100%" flexDir="column" justifyContent="space-between">
-          <Flex width={{sm:"100%"}} justifyContent="center">
+          <Flex width={{base:"100%"}} justifyContent="center">
             <MotionBox
               height="50px"
               borderLeft="1px solid #000"
@@ -102,6 +102,7 @@ const HomeAbout = () => {
               variant="h3" 
               as="h3" 
               textAlign="left" 
+              paddingTop="1rem"
               paddingBottom="2rem"
               variants={headingVariants}
               initial="hidden"
@@ -112,6 +113,7 @@ const HomeAbout = () => {
             <Box sx={serviceSeperator}/>
             <MotionText
               variant="p"
+              paddingBottom="1rem"
               textAlign="right"
               variants={textVariants}
               initial="hidden"
@@ -135,7 +137,7 @@ const HomeAbout = () => {
       <GridItem height="100%" paddingY="2rem">
         <MotionImage
           src={HomeImage}
-          height={{ sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
+          height={{ base:"90%", sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
           width="auto"
           marginX="auto"
           marginY="auto"

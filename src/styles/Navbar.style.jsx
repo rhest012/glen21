@@ -5,6 +5,7 @@ export const NavbarContainer = styled.nav `
     width: 100%;
     height: ${(props) => (props.navBarOpener ? "100vh" : "80px")};
     padding: 2rem;
+    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
 
@@ -17,7 +18,7 @@ export const NavbarContainer = styled.nav `
 
 export const LeftContainer = styled.div`
     display: flex;
-    padding: 0 3rem 0 0;
+    padding: 0 1.5rem 0 0;
     justify-content: flex-end;
     flex: 45%;
     gap: 15%;
@@ -25,7 +26,7 @@ export const LeftContainer = styled.div`
 
 export const RightContainer = styled.div`
     display: flex;
-    padding: 0 0 0 3rem;
+    padding: 0 0 0 1.5rem;
     flex: 45%;
     gap: 15%;
 `;
@@ -91,7 +92,7 @@ export const NavbarLink = styled(Link) `
 
 export const Logo = styled.img `
     height: auto;
-    min-width: 140px;
+    min-width: 130px;
 `;
 
 export const MobileMenuButton = styled.button `
@@ -100,7 +101,7 @@ export const MobileMenuButton = styled.button `
     background: none;
     border: none;
     color: #000;
-    font-size: 45px;
+    font-size:  45px;
     cursor: pointer; 
 
     /* @media (min-width:700px) { */

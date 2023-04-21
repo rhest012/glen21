@@ -97,7 +97,7 @@ const HomeServices = () => {
       backgroundImage={serviceBackground}
       ref={ref}
     >
-        <Flex width="100%" gap="2rem" flexDirection={{sm:"column", md:"column", lg:"row", xl:"row"}}>
+        <Flex width="100%" gap="2rem" flexDirection={{base:"column", sm:"column", md:"column", lg:"row", xl:"row"}}>
             <MotionFlex 
               sx={servicesStyle}
               variants={backgroundVariants}

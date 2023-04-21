@@ -14,7 +14,7 @@ import { motion } from 'framer-motion'
 
 const UpcomingEventsSwiper = () => {
     const sliderContainer = {
-        height:{ sm:"33vh", md:"53vh", lg:"90vh", xl:"88vh"},
+        height:{ base:"25vh", sm:"33vh", md:"53vh", lg:"90vh", xl:"88vh"},
         width:"100vw",
         bgSize:"cover",
         bgPosition:"center",
@@ -23,15 +23,15 @@ const UpcomingEventsSwiper = () => {
     }
 
     const linkContainer = {
-        marginRight:{ sm:"2rem", md:"2rem", lg:"6rem", xl:"6rem"},
-        marginLeft: { sm:"3rem", md:"3rem", lg:"0", xl:"0" },
-        fontSize:{sm:"0.75rem", md:"0.85rem"},
+        marginRight:{ base:"1rem", sm:"2rem", md:"2rem", lg:"6rem", xl:"6rem"},
+        marginLeft: { base:"0.5rem", sm:"3rem", md:"3rem", lg:"0", xl:"0" },
+        fontSize:{ base:"0.65rem", sm:"0.75rem", md:"0.85rem"},
         marginBottom: { sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0" },
         textAlign:"center",
         fontWeight:"600",
         variant:"btn", 
         paddingY:"0.5rem",
-        width:{ sm:"20%", md:"20%", lg:"40%", xl:"40%"}, 
+        width:{ base:"100px", sm:"20%", md:"20%", lg:"40%", xl:"40%"}, 
         borderRadius:"2rem",
         border:"1px solid #fff",
         background:"transparent",
