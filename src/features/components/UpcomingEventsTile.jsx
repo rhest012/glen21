@@ -8,8 +8,9 @@ import { useInView } from 'react-intersection-observer'
 const UpcomingEventsTile = () => {
     const singleEventContainer = {
         flexDirection:"column",
-        width:"80%",
-        marginX:"auto",
+        width:{ sm:"100%", md:"100%", lg:"80%", xl:"80%"},
+        marginLeft:{ sm:"2.5rem", md:"2.5rem", lg:"2rem", xl:"2rem"},
+        flexDirection:"column",
         justifyContent:"center",
       }
     
@@ -17,16 +18,24 @@ const UpcomingEventsTile = () => {
         height:"70px",
         width:"70px",
         borderLeft:"1px solid #000",
+      
         borderTop:"1px solid #000",
       }
     
       const bottomRightBorder = {
-        marginLeft:"87%",
+        marginLeft:{lg:"80%", xl:"87%"},
         marginTop:"-4%",
+        display: {sm:"none", md:"none", lg:"block", xl:"block"},
+        position:"relative",
         height:"70px",
         width:"70px",
         borderRight:"1px solid #000",
         borderBottom:"1px solid #000",
+      }
+
+      const posterSize = {
+        height:{ sm:"90%", md:"90%", lg:"90%",  xl:"550px"},
+        width:{ sm:"90%", md:"90%", lg:"90%",  xl:"550px"}
       }
 
       //  Framer Motion
@@ -120,7 +129,7 @@ const UpcomingEventsTile = () => {
        
      
   return (
-    <Box paddingX="2rem" marginY="6rem" ref={ref}>
+    <Box paddingX={{ base:"0.25rem", md:"0.25rem", lg:"2rem", xl:"2rem"}} marginY="6rem" ref={ref}>
         <MotionHeading 
           variant="h3" 
           as="h3" 
@@ -132,8 +141,8 @@ const UpcomingEventsTile = () => {
         >
           Upcoming Shows
         </MotionHeading>
-        <Grid gridTemplateColumns="50% 50%">
-          <GridItem width="100%">
+        <Grid gridTemplateColumns={{ base:"100%", md: "100%", lg:"50% 50%", xl:"50% 50%"}}>
+          <GridItem width="100%" marginBottom={{base:"2rem", md:"2rem", lg:"0", xl:"0" }}>
             <Link 
               variants={containerVariants}
               whileHover='hover'
@@ -146,6 +155,7 @@ const UpcomingEventsTile = () => {
                 sx={singleEventContainer}
                 variants={containerVariants}
                 whileHover="hover"
+                marginBottom={{sm:"2.5rem", md:"2.5rem", lg:"0", xl:"0"}}
               >
                 <MotionBox 
                   sx={topLeftBorder}
@@ -159,8 +169,7 @@ const UpcomingEventsTile = () => {
                       variants={posterVariants}
                       initial="hidden"
                       animate="visible"
-                      height="550px"
-                      width="550px"
+                      sx={posterSize}
                     />
                     <Flex justifyContent="space-between" paddingY="1rem">
                       <MotionHeading 
@@ -169,6 +178,7 @@ const UpcomingEventsTile = () => {
                         variants={showNameVariants}
                         initial="hidden"
                         animate="visible"
+                        display={{sm:"none", md:"none", lg:"block", xl:"block"}}
                       >
                         Tamia Live In SA
                       </MotionHeading>
@@ -188,7 +198,6 @@ const UpcomingEventsTile = () => {
                   variants={borderBottomVariants}
                   initial="hidden"
                   animate="visible"/>
-                
               </MotionFlex>
             </Link>
           </GridItem>
@@ -211,14 +220,13 @@ const UpcomingEventsTile = () => {
                   animate="visible"
 
                 />
-                  <Flex flexDirection="column" paddingX="1rem" marginY="-3.5rem">
+                  <Flex flexDirection="column" paddingX="1rem" marginY="-3.5rem" maxWidth="100%">
                     <MotionImage
                       src={BoysIIMenSquare}
                       variants={posterVariants}
                       initial="hidden"
                       animate="visible"
-                      height="550px"
-                      width="550px"
+                      sx={posterSize}
                     />
                     <Flex justifyContent="space-between" paddingY="1rem">
                       <MotionHeading 
@@ -226,7 +234,9 @@ const UpcomingEventsTile = () => {
                         as="h6" 
                         variants={showNameVariants}
                         initial="hidden"
-                        animate="visible">
+                        animate="visible"
+                        display={{sm:"none", md:"none", lg:"block", xl:"block"}}
+                      >
                         Boys II Men SA Tour
                       </MotionHeading>
                       <MotionHeading 
@@ -235,6 +245,7 @@ const UpcomingEventsTile = () => {
                         variants={showDateVariants}
                         initial="hidden"
                         animate="visible"
+                        textAlign="right"
                       >
                         Purchase Tickets
                       </MotionHeading>

@@ -1,10 +1,11 @@
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Navigation, Pagination, A11y } from 'swiper'
+import { Navigation, Pagination, A11y, Autoplay } from 'swiper'
 import TamiaBackground from './../../assets/Tamia_Cover.jpg'
 import BiiMenBackground from './../../assets/Boyz2Men_Header.jpg'
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/css/autoplay'
-import '../../styles/index.css'
+import 'swiper/swiper-bundle.min.css';
+import 'swiper/css/autoplay';
+import '../../styles/index.css';
+import 'swiper/css/autoplay';
 
 // import required modules
 import { Box, Flex, Link} from '@chakra-ui/react';
@@ -13,12 +14,34 @@ import { motion } from 'framer-motion'
 
 const UpcomingEventsSwiper = () => {
     const sliderContainer = {
-        height:"88vh",
+        height:{ sm:"33vh", md:"53vh", lg:"90vh", xl:"88vh"},
         width:"100vw",
         bgSize:"cover",
         bgPosition:"center",
         bgRepeat:"no-repeat",
         padding:"2rem",
+    }
+
+    const linkContainer = {
+        marginRight:{ sm:"2rem", md:"2rem", lg:"6rem", xl:"6rem"},
+        marginLeft: { sm:"3rem", md:"3rem", lg:"0", xl:"0" },
+        fontSize:{sm:"0.75rem", md:"0.85rem"},
+        marginBottom: { sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0" },
+        textAlign:"center",
+        fontWeight:"600",
+        variant:"btn", 
+        paddingY:"0.5rem",
+        width:{ sm:"20%", md:"20%", lg:"40%", xl:"40%"}, 
+        borderRadius:"2rem",
+        border:"1px solid #fff",
+        background:"transparent",
+        color:"#fff",
+        textTransform:"uppercase",
+        _hover : {
+            background: "#fff",
+            color : "#161629"
+        }
+        
     }
     
     // Framer Motion
@@ -41,8 +64,9 @@ const UpcomingEventsSwiper = () => {
   return (
     <>
         <Swiper
-            modules={[Navigation, Pagination, A11y]}
+            modules={[Navigation, Pagination, A11y, Autoplay]}
             navigation
+            autoplay={true}
             pagination={{
             clickable: true,
             }}
@@ -60,20 +84,11 @@ const UpcomingEventsSwiper = () => {
                 exit= 'exit'
 
             >
-                <Flex width="100%" height="100%" flexDirection="column" justifyContent="flex-end" alignItems="flex-end" >
+                <Flex 
+                    width="100%" height="100%" flexDirection="column" justifyContent="flex-end" alignItems={{ sm:"flex-start", md:"flex-start", lg:"flex-end", xl:"flex-end"}}
+                >
                     <Link 
-                        marginRight="6rem"
-                        marginTop="1rem"
-                        textAlign="center"
-                        fontWeight="600"
-                        variant="btn" 
-                        paddingY="0.5rem"
-                        width="40%" 
-                        borderRadius="2rem"
-                        border="1px solid #fff"
-                        background="transparent"
-                        color="#fff"
-                        textTransform="uppercase"
+                        sx={linkContainer}
                         _hover = {{
                             background: "#fff",
                             color : "#161629"
@@ -87,39 +102,23 @@ const UpcomingEventsSwiper = () => {
             </MotionBox>
         </SwiperSlide>
         <SwiperSlide>
-        <Box
-            height="88vh"
-            width="100vw"
+        <MotionBox
             backgroundImage={BiiMenBackground}
-            bgSize="cover"
-            bgPosition="center"
-            bgRepeat="no-repeat"
-            padding="2rem"
+            variants={headerVariants}
+            initial="hidden"
+            animate="visible"
+            exit= 'exit'
+            sx={sliderContainer}
         >
-            <Flex width="100%" height="100%" flexDirection="column" justifyContent="flex-end" alignItems="flex-end" >
+            <Flex width="100%" height="100%" flexDirection="column" justifyContent="flex-end" alignItems={{ sm:"flex-start", md:"flex-start", lg:"flex-end", xl:"flex-end"}} >
                 <Link 
-                    marginRight="6rem"
-                    marginTop="1rem"
-                    textAlign="center"
-                    fontWeight="600"
-                    variant="btn" 
-                    paddingY="0.5rem"
-                    width="40%" 
-                    borderRadius="2rem"
-                    border="1px solid #fff"
-                    background="transparent"
-                    color="#fff"
-                    textTransform="uppercase"
-                    _hover = {{
-                        background: "#fff",
-                        color : "#161629"
-                    }}
+                    sx={linkContainer}
                     as={ReachLink} to="/boys"
                 >
                     Explore
                 </Link>
             </Flex>
-        </Box>
+        </MotionBox>
 
         </SwiperSlide>
         </Swiper>

@@ -99,28 +99,50 @@ const BoysIIMen = () => {
     }
 
   return (
-    <Box marginTop="2rem" height="91vh" overflow="scroll">
-    <Flex marginX="2rem">
+    <Box marginTop="2rem" height={{ lg:"91vh", xl:"91vh"}}  >
+    <Flex marginX="2rem" flexDirection={{ sm:"column", md:"column", lg:"row", xl:"row" }}>
         <MotionFlex 
-            width="70%" 
-            flexDir="column" 
+            width={{ base:"100%", md:"100%", lg:"70", xl:"70%" }}
+            flexDirection="column"
             gap="1rem" 
-            borderRight="1px solid #000" paddingRight="2rem" 
+            borderRight={{ sm:"none", md:"none", lg:"1px solid #000", xl:"1px solid #000" }}
+            borderBottom={{ sm:"1px solid #000", md:"1px solid #000", lg:"none", xl:"none" }}
             paddingY="1rem"
+            paddingRight={{ sm:"0", md:"0", lg:"2rem", xl:"2rem" }}
             Height="260px"
             variants={descriptionVariants}
             initial="hidden"
             animate="visible"
             exit= 'exit'
         >     
-            <Heading variant="h1" textAlign="right">
+            <Heading 
+                variant="h1" 
+                textAlign={{ sm:"left", md:"left", lg:"right", xl:"right"}}
+                paddingBottom= {{ sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0"  }}
+            >
                 Tamia Live<br/> in South Africa
             </Heading>
+            <Box
+                borderBottom= {{ sm: "1px solid #000", md: "1px solid #000", lg:"none", xl:"none" }}
+                marginLeft={{sm:"30%", md:"30%"}}
+                display={{lg:"none", xl:"none"}}
+            />
+
+            
             <Text variant="p" textAlign="right">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi blandit sagittis diam et bibendum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Quisque quis scelerisque libero. Aenean metus tortor, fringilla quis odio vitae, pretium egestas lectus.
+                Tamia, the multi-Grammy-nominated international artist will be touring the country with a three-city tour later this year. <br/>
+                The Canadian born R&B singer / songwriter has released multiple albums and has collaborated with several prominent international musical icons.
             </Text>
         </MotionFlex>
-        <Flex width="30%" paddingLeft="2rem" paddingY="1rem"  flexDir="column" alignContent="space-between" justifyContent="space-between" height="260px">
+        <Flex 
+            width={{ base:"100%", md:"100%", lg:"30%", xl:"30%"}} 
+            paddingLeft={{ sm:"0", md:"0", lg:"2rem", xl:"2rem"}}
+            paddingY="1rem"  
+            flexDir="column" 
+            alignContent="space-between" 
+            justifyContent="space-between" 
+            height="260px"
+        >
             <Flex justifyContent="space-between" width="100%">
                 <MotionBox 
                     paddingRight="0.5rem"
@@ -223,7 +245,7 @@ const BoysIIMen = () => {
         <MotionImage
             marginTop="2rem"
             width="100%"
-            height="400px"
+            height={{ sm:"auto", md:"auto", lg:"400px", xl:"400px"}}
             src={TamiaImage}
             variants={imageVariants}
             initial="hidden"

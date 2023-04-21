@@ -1,5 +1,5 @@
 import { Box, Flex, Grid, GridItem, Heading, Image, Text } from "@chakra-ui/react"
-import HomeImage from "../../assets/Bas_JHB.jpg"
+import HomeImage from "../../assets/Crowd_3.jpg"
 import { motion } from "framer-motion"
 import { useInView } from "react-intersection-observer"
 
@@ -25,6 +25,11 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       x: 0,
+      transition: {delay: 1, duration: 1}
+    },
+    exit: {
+      opacity: 0,
+      x: 50,
       transition: {delay: 1, duration: 1}
     }
   }
@@ -78,33 +83,20 @@ const HomeAbout = () => {
       transition: {delay: 1, duration: 1}
     }
   }
-  
-  
-
   return (
-    <Box ref={ref} marginY="6rem">
-    <Grid gridTemplateColumns="50% 50%">
-      <GridItem height="100%" paddingY="2rem">
-        <MotionImage
-          src={HomeImage}
-          height="550px"
-          width="550px"
-          marginX="auto"
-          marginY="auto"
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-        />
-      </GridItem>
-      <GridItem height="100%"> 
+    <Box ref={ref} marginY="8rem" marginX={{sm:"1rem", md:"1rem"}}>
+    <Grid gridTemplateColumns={{ sm:"100%", md:"100%", lg:"50% 50%",  xl:"50% 50%"}}>
+    <GridItem height="100%"> 
         <Flex height="100%" flexDir="column" justifyContent="space-between">
-          <MotionBox
-            height="50px"
-            borderLeft="1px solid #000"
-            variants={borderTopVariants}
-            initial="hidden"
-            animate="visible"
-          />
+          <Flex width={{sm:"100%"}} justifyContent="center">
+            <MotionBox
+              height="50px"
+              borderLeft="1px solid #000"
+              variants={borderTopVariants}
+              initial="hidden"
+              animate="visible"
+            />
+          </Flex>
           <Flex flexDir="column" paddingX="3rem" flexWrap="wrap" alignItems="center" >
             <MotionHeading 
               variant="h3" 
@@ -117,14 +109,7 @@ const HomeAbout = () => {
             >
               One stop entertainment solutions agency
             </MotionHeading>
-            <MotionBox
-              borderTop="1px solid #000"
-              marginLeft="2rem"
-              paddingBottom="1rem"
-              variants={borderTopVariants}
-              initial="hidden"
-              animate="visible"
-            />
+            <Box sx={serviceSeperator}/>
             <MotionText
               variant="p"
               textAlign="right"
@@ -136,14 +121,28 @@ const HomeAbout = () => {
               Glen21 knows that with hard work and dedication we will soon be known as Africa’s one-stop entertainment solutions agency.
             </MotionText>
           </Flex>
-          <MotionBox
-            variants={borderBottomVariants}
-            initial="hidden"
-            animate="visible"
-            height="50px"
-            borderLeft="1px solid #000"
-          />
+          <Flex width={{sm:"100%"}} justifyContent="center">
+            <MotionBox
+              variants={borderBottomVariants}
+              initial="hidden"
+              animate="visible"
+              height="50px"
+              borderLeft="1px solid #000"
+            />
+          </Flex>
         </Flex>
+      </GridItem>
+      <GridItem height="100%" paddingY="2rem">
+        <MotionImage
+          src={HomeImage}
+          height={{ sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
+          width="auto"
+          marginX="auto"
+          marginY="auto"
+          variants={imageVariants}
+          initial="hidden"
+          animate="visible"
+        />
       </GridItem>
     </Grid>
     </Box>

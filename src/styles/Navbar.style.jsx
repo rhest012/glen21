@@ -84,14 +84,14 @@ export const NavbarLink = styled(Link) `
         width: 100%;
         }
 
-    @media (max-width:700px) {
+    /* @media (max-width:700px) {
         display: none;
-    }
+    } */
 `;
 
 export const Logo = styled.img `
     height: auto;
-    width: 120px;
+    min-width: 140px;
 `;
 
 export const MobileMenuButton = styled.button `
@@ -100,12 +100,12 @@ export const MobileMenuButton = styled.button `
     background: none;
     border: none;
     color: #000;
-    font-size:  45px;
+    font-size: 45px;
     cursor: pointer; 
 
-    @media (min-width:700px) {
+    /* @media (min-width:700px) { */
         display: none;
-    }
+    /* } */
 `;
 
 export const NavbarMobileContainer = styled.div`
@@ -113,9 +113,9 @@ export const NavbarMobileContainer = styled.div`
     flex-direction: column;
     align-items: center;
 
-    @media (min-width: 700px) {
+    /* @media (min-width: 700px) { */
         display: none;
-    }
+    /* } */
 `;
 
 export const NavbarLinkMobile = styled(Link) `

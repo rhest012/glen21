@@ -9,7 +9,7 @@ const HomeServices = () => {
     const servicesStyle = {
         width:"100%", 
         flexDirection: "column",
-        marginY:"auto",
+        marginY:{ sm:"1.5rem", md:"1.5rem", lg:"auto", xl:"auto"},
         flexWrap: "wrap",
         justifyContent: "center",
         height: "65vh",
@@ -93,10 +93,11 @@ const HomeServices = () => {
       marginTop="6rem" 
       paddingX="2rem" 
       paddingY="6rem" 
+      height={{sm:"100%", md:"100%"}}
       backgroundImage={serviceBackground}
       ref={ref}
     >
-        <Flex width="100%" gap="2rem">
+        <Flex width="100%" gap="2rem" flexDirection={{sm:"column", md:"column", lg:"row", xl:"row"}}>
             <MotionFlex 
               sx={servicesStyle}
               variants={backgroundVariants}
