@@ -99,15 +99,15 @@ const BoysIIMen = () => {
 
   return (
     <Box marginTop="2rem" height="91vh">
-    <Flex marginX="2rem" flexDirection={{ sm:"column", md:"column", lg:"row", xl:"row" }}>
+    <Flex marginX="2rem" flexDirection={{ base:"column", sm:"column", md:"column", lg:"row", xl:"row" }}>
     <MotionFlex 
         width={{ base:"100%", md:"100%", lg:"70", xl:"70%" }}
         flexDirection="column"
         gap="1rem" 
-        borderRight={{ sm:"none", md:"none", lg:"1px solid #000", xl:"1px solid #000" }}
-        borderBottom={{ sm:"1px solid #000", md:"1px solid #000", lg:"none", xl:"none" }}
+        borderRight={{ base:"none", sm:"none", md:"none", lg:"1px solid #000", xl:"1px solid #000" }}
+        borderBottom={{ base:"1px solid #000", sm:"1px solid #000", md:"1px solid #000", lg:"none", xl:"none" }}
         paddingY="1rem"
-        paddingRight={{ sm:"0", md:"0", lg:"2rem", xl:"2rem" }}
+        paddingRight={{ base:"0", sm:"0", md:"0", lg:"2rem", xl:"2rem" }}
         Height="260px"
         variants={descriptionVariants}
         initial="hidden"
@@ -115,20 +115,20 @@ const BoysIIMen = () => {
         exit= 'exit'
         >       
             <Heading variant="h1" 
-                textAlign={{ sm:"left", md:"left", lg:"right", xl:"right"}}
-                paddingBottom= {{ sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0" }}
+                textAlign={{ base:"left", sm:"left", md:"left", lg:"right", xl:"right"}}
+                paddingBottom= {{ base:"0.5rem", sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0" }}
             >
                 Boys II Men South <br/>Africa Tour
             </Heading>
             <Box
-                borderBottom= {{ sm: "1px solid #000", md: "1px solid #000", lg:"none", xl:"none" }}
-                marginLeft={{sm:"30%", md:"30%"}}
+                borderBottom= {{ base:"1px solid #000", sm: "1px solid #000", md: "1px solid #000", lg:"none", xl:"none" }}
+                marginLeft={{ base:"15%", sm:"30%", md:"30%"}}
                 display={{lg:"none", xl:"none"}}
             />
             <Text variant="p" textAlign="right">
-            Boyz II Men remains one of the most truly iconic R&B groups in the music industry history.<br/>
-            The group redefined popular R&B music and continues to create timeless hits that appeal to fans across all generations.<br/>
-            The band has penned and performed some of the most celebrated classics of the past two decades
+                Boyz II Men remains one of the most truly iconic R&B groups in the music industry history.<br/>
+                The group redefined popular R&B music and continues to create timeless hits that appeal to fans across all generations.<br/>
+                The band has penned and performed some of the most celebrated classics of the past two decades
             </Text>
         </MotionFlex>
         <Flex 
@@ -242,7 +242,7 @@ const BoysIIMen = () => {
         <MotionImage
             marginTop="2rem"
             width="100%"
-            height={{ sm:"auto", md:"auto", lg:"400px", xl:"400px"}}
+            height={{ base:"130px", sm:"130px", md:"auto", lg:"400px", xl:"400px"}}
             src={BoysiiMen}
             variants={imageVariants}
             initial="hidden"
