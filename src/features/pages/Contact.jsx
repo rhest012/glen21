@@ -169,7 +169,7 @@ const Contact = () => {
         height={{ base:"18vh", sm:"20vh", md:"20vh", lg:"31vh", xl:"31vh" }}
         backgroundImage= {ContactHeader}
         backgroundPosition={{ base:"left center", sm:"left center",  md:"left center", lg:"center", xl:"center" }}
-        backgroundSize={{ base:"250%", xl:"cover"}}
+        backgroundSize={{ base:"250%", sm: "220%", md:"cover", lg:"cover", xl:"cover"}}
         paddingX="2rem"
         alignItems="center"
         variants={BgVariant}
