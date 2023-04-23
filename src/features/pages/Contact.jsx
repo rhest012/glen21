@@ -169,7 +169,7 @@ const Contact = () => {
         height={{ base:"18vh", sm:"20vh", md:"20vh", lg:"31vh", xl:"31vh" }}
         backgroundImage= {ContactHeader}
         backgroundPosition={{ base:"left center", sm:"left center",  md:"left center", lg:"center", xl:"center" }}
-        backgroundSize="cover"
+        backgroundSize={{ base:"250%", xl:"cover"}}
         paddingX="2rem"
         alignItems="center"
         variants={BgVariant}
@@ -296,7 +296,7 @@ const Contact = () => {
                         exit="exit"
                         textAlign={{ base:"center", sm:"center", md:"center", lg:"left", xl:"left"}}
                     >
-                        Building 2, 4 Karen Str, Bryanston | +27 87 805 9023
+                        Building 2, 4 Karen Str, Bryanston | +27878059023
                     </MotionText>
                     <MotionFlex 
                         gap="2rem" 
@@ -313,7 +313,7 @@ const Contact = () => {
                         <Link href="https://www.instagram.com/glen21ent" isExternal>
                             <FaInstagram fontSize="1.25rem"/>  
                         </Link>
-                        <Link isExternal href="https://www.facebook.com/glen21ent/">
+                        <Link isExternal href="https://www.twitter.com/glen21ent/">
                             <FaTwitter fontSize="1.25rem"/>
                         </Link>
                         <Link isExternal href="mailto:info@glen21.com">

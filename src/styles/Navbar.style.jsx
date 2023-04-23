@@ -5,7 +5,6 @@ export const NavbarContainer = styled.nav `
     width: 100%;
     height: ${(props) => (props.navBarOpener ? "100vh" : "80px")};
     padding: 2rem;
-    margin-bottom: 0.5rem;
     display: flex;
     flex-direction: column;
 
