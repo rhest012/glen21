@@ -7,7 +7,7 @@ import Underline from '../../assets/border.svg'
 
 const HomeServices = () => {
     const servicesStyle = {
-        width:"100%", 
+        width:"100vw", 
         flexDirection: "column",
         marginY:{ sm:"1.5rem", md:"1.5rem", lg:"auto", xl:"auto"},
         flexWrap: "wrap",
@@ -180,11 +180,7 @@ const HomeServices = () => {
             >
                 One of Glen21’s greatest skills is curating TV campaigns to enhance brand strategies with broad campaign management and connections to well known artists.
             </MotionText>
-            <svg 
-              src={Underline}
-              pathLength="2rem"
-            >
-            </svg>
+            
             </MotionFlex>
         </Flex>
       </Box>

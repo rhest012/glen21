@@ -1,11 +1,13 @@
 import React from 'react'
-import ContactHeader from '../../assets/Glen21_Header.jpg'
-import ContactHeaderMobile from '../../assets/Glen21_Mobile_Header.jpg'
-import { Box, Flex, FormControl, Grid, GridItem, HStack, Heading, Image, Input, Stack, Text, Textarea, Link } from '@chakra-ui/react'
+import { Box, Flex, Grid, GridItem, HStack, Heading, Image, Input, Stack, Text, Textarea, Link } from '@chakra-ui/react'
 import ContactImage from '../../assets/Crowd_2.jpg'
 import { FaTwitter, FaFacebookF, FaInstagram, FaEnvelope } from 'react-icons/fa';
+
+import Marquee from "react-fast-marquee";
+
 // Framer Motion
 import { motion } from 'framer-motion';
+import Header from '../components/Header'
 
 const Contact = () => {
     const inputStyle = {
@@ -31,7 +33,7 @@ const Contact = () => {
     const pageHeadingVariant = {
         hidden: {
           opacity: 0,
-          x: -450,
+          
         },
         visible: {
           opacity: 1,
@@ -40,7 +42,7 @@ const Contact = () => {
         },
         exit: {
             opacity: 0,
-            x: -450,
+            
             transition: {delay: 1, duration: 1}
           },
 
@@ -164,32 +166,7 @@ const Contact = () => {
 
   return (
    <>
-    <MotionFlex 
-        width="100%"
-        height={{ base:"18vh", sm:"20vh", md:"20vh", lg:"31vh", xl:"31vh" }}
-        backgroundImage= {ContactHeader}
-        backgroundPosition={{ base:"left center", sm:"left center",  md:"left center", lg:"center", xl:"center" }}
-        backgroundSize={{ base:"250%", sm: "220%", md:"cover", lg:"cover", xl:"cover"}}
-        paddingX="2rem"
-        alignItems="center"
-        variants={BgVariant}
-        initial="hidden"
-        animate="visible"
-        exit="exit"
-    >
-        <MotionHeading 
-            fontSize="3.81rem"
-            textAlign={{base:"center", sm:"left", md:"left", lg:"left", x:"lg"}} 
-            as="h1"
-            color="#fff"
-            variants={pageHeadingVariant}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-        >
-            Contact
-        </MotionHeading>
-    </MotionFlex>
+    <Header/>
     <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}} width="100%" height="60vh"> 
         <GridItem>
             <Flex flexDirection="column" justifyContent="center" width="100%">
@@ -206,6 +183,7 @@ const Contact = () => {
                     margin="auto"
                     height="375px"
                     width="600px"
+                    borderRadius="1rem"
                     variants={imageVariants}
                     initial="hidden"
                     animate="visible"

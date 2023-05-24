@@ -2,6 +2,7 @@ import { Link as ReachLink} from 'react-router-dom'
 import { Box, Flex, Grid, GridItem, Heading, Image, Link } from "@chakra-ui/react"
 import TamiaSquare from "../../assets/Tamia_Square.jpg"
 import BoysIIMenSquare from "../../assets/Boyz2Men_Square.jpg"
+import HeyNeighbourSquare from '../../assets/Hey-Nieghbour.jpg'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
 
@@ -257,6 +258,67 @@ const UpcomingEventsTile = () => {
                   initial="hidden"
                   animate="visible"
                 />
+              </MotionFlex>
+            </Link>
+          </GridItem>
+        </Grid>
+        <Grid gridTemplateColumns={{ base:"100%", md: "100%", lg:"50% 50%", xl:"50% 50%"}} marginTop="2rem"> 
+          <GridItem width="100%" marginBottom={{base:"2.5rem", md:"2.5rem", lg:"0", xl:"0" }}>
+            <Link 
+              variants={containerVariants}
+              whileHover='hover'
+              isExternal 
+              href="https://www.ticketpros.co.za/portal/web/index.php?page_id=event&event_id=5077564a-6bcc-a263-fb88-642d3e6c4844" 
+              _hover={{
+                textDecorate: "none",
+              }}>
+              <MotionFlex 
+                sx={singleEventContainer}
+                variants={containerVariants}
+                whileHover="hover"
+                marginBottom={{base:"1.25rem", sm:"2.5rem", md:"2.5rem", lg:"0", xl:"0"}}
+              >
+                <MotionBox 
+                  sx={topLeftBorder}
+                  variants={borderTopVariants}
+                  initial="hidden"
+                  animate="visible"
+                />
+                  <Flex flexDirection="column" paddingX="1rem" marginY="-3.5rem">
+                    <MotionImage
+                      src={HeyNeighbourSquare}
+                      variants={posterVariants}
+                      initial="hidden"
+                      animate="visible"
+                      sx={posterSize}
+                    />
+                    <Flex justifyContent="space-between" paddingY="1rem">
+                      <MotionHeading 
+                        variant="h6" 
+                        as="h6"
+                        variants={showNameVariants}
+                        initial="hidden"
+                        animate="visible"
+                        display={{base:"none", sm:"none", md:"none", lg:"block", xl:"block"}}
+                      >
+                        Hey Neighbour
+                      </MotionHeading>
+                      <MotionHeading 
+                        variant="h6" 
+                        as="h6"
+                        variants={showDateVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        Purchase Tickets
+                      </MotionHeading>
+                    </Flex>
+                  </Flex>
+                <MotionFlex 
+                  sx={bottomRightBorder} 
+                  variants={borderBottomVariants}
+                  initial="hidden"
+                  animate="visible"/>
               </MotionFlex>
             </Link>
           </GridItem>

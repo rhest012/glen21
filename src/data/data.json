@@ -1,0 +1,47 @@
+{
+    "headers" : [
+        {
+            "pageName": "Previous Shows",
+            "backgroundImage" : "Previous_Shows_Header.jpg",
+            "url": "/previous-shows"
+        },
+        {
+            "pageName": "Contact",
+            "backgroundImage" : "Contact_Header.jpg",
+            "url": "/contact"
+        },
+        {
+            "pageName": "Background",
+            "backgroundImage" : "Background_Header.jpg",
+            "url": "/background"
+        }
+    ],
+    "prev-shows": [
+        {
+            "title": "Scorpion Kings",
+            "image": "Glen21_ScorpionKings.jpg"
+        },
+        {
+            "title": "Toni Braxton",
+            "image": "Glen21_ToniBraxton.jpg"
+        },
+        {
+            "title": "J Cole",
+            "image": "Glen21_Jcole.jpg"
+        },
+        {
+            "title": "BAS",
+            "image" : "Glen21_BAS.jpg"
+        },
+        {
+            "title": "Soul Fest",
+            "image": "Glen21_SoulFest.jpg"
+        },
+        {
+            "title": "Chance The Rapper",
+            "image": "Glen21_Chance.jpg"
+        }
+
+        
+    ]
+}

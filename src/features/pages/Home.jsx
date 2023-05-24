@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <>
-      <Box maxWidth="100%">
+      <Box maxWidth="100vw">
         <UpcomingEventsSwiper/>
         <UpcomingEventsTile/>
         <HomeAbout/>

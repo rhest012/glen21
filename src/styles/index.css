@@ -27,3 +27,55 @@ code {
 .swiper-pagination-bullet-active {
   background: #fff !important;
 }
+
+.menu-item-container {
+  background: #fff;
+  margin: 0.5rem 0;
+  position: relative; 
+}
+
+.menu-item-container::after {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: -8px;
+  left: 0;
+  transition: all 0.6s;
+}
+
+.menu-item-container::before {
+  content: "";
+  width: 0;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: all 0.6s;
+}
+
+.menu-item-container:hover {
+  background: #fff;
+}
+
+.menu-item-container:hover::after { 
+  width: 100%;
+}
+
+.menu-item-container:hover::before { 
+  width: 100%;
+}
+
+.menu-item-image {
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.menu-item-container:hover .menu-item-image {
+  opacity: 1;
+  scale: 1.1
+}
+
+

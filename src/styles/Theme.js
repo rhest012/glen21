@@ -50,6 +50,13 @@ const theme = extendTheme ({
               letterSpacing: "1.5px",
               
             },
+            pageHeading: {
+            fontSize:"4.76rem",
+            textTransform:"uppercase",
+            textAlign:{base:"center", sm:"left", md:"left", lg:"left", x:"lg"} ,
+            color:"#000",
+            padding:"0.5rem",
+            }
           },
         },
         Text: {
