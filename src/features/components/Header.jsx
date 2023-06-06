@@ -2,6 +2,7 @@ import React from 'react'
 import ContactHeader from '../../assets/headers/Contact_Header.jpg'
 import Marquee from "react-fast-marquee";
 import { Box, Flex, Heading } from '@chakra-ui/react';
+import { useFetchFirebase } from '../../actions/useFetchFirebase'
 
 // Framer Motion
 import { easeIn, motion } from 'framer-motion';
@@ -48,22 +49,18 @@ const Header = () => {
 
     }
 
-    const { data:headers, error, isPending} = useFetch(' http://localhost:8000/headers');
+    const data = useFetchFirebase('headers');
     const location = useLocation();
 
     let activeHeader;
 
-    if (headers != undefined) {
-        activeHeader = headers.find((header) => header.url === location.pathname);
+    if (data != null) {
+        activeHeader = data.find((header) => header.url === location.pathname);   
     }
-
-    console.log(headers)
-    console.log(activeHeader)
-    // console.log(location.pathname)
     
   return (
     <>
-       {headers && (
+       {activeHeader && (
             <>
                 <Box borderTop="1px solid #000">
                     <Marquee
@@ -71,6 +68,7 @@ const Header = () => {
                     >
                         <MotionHeading 
                             variant="pageHeading"
+                            fontSize= {{ base: "3.81rem", sm: "3.81rem", md: "3.81rem", lg: "4.67rem", xl: "4.67rem" }}
                             as="h1"
                             variants={pageHeadingVariant}
                             initial="hidden"
