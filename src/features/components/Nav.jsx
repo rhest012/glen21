@@ -10,10 +10,9 @@ import {
     Text,
     Grid,
     GridItem,
-    Link,
   } from '@chakra-ui/react'
 
-import { Link as ReachLink} from 'react-router-dom'
+import { Link, NavLink, Link as ReachLink} from 'react-router-dom'
 import placeHolderImage from "../../assets/previousShows/Glen21_ScorpionKings.jpg"
 import NickFest from '../../assets/Header/NickFest.jpg'
 import TheDome from '../../assets/Header/TheDome.jpg'
@@ -141,23 +140,23 @@ const Nav = () => {
             paddingY="1rem"
             height="10vh"
         >
-            <Link as={ReachLink} to='/'>
+            <NavLink as={NavLink} to='/'>
                 <MotionImage
                     src={Glen21Logo}
                     width="150px"
-                    // variants={logoVariants}
+                    variants={logoVariants}
                     // initial="hidden"
                     // animate="visible"
                     // exit= 'exit'
                 />
-            </Link>
+            </NavLink>
         <Menu 
             closeOnSelect="true"
         >
             <MenuButton as="button" textSize="2.33rem" textTransform="uppercase"> 
                 <MotionHeading 
                     variant="h6"
-                    // variants={menuButtonVariants}
+                    variants={menuButtonVariants}
                     // initial="hidden"
                     // animate="visible"
                     // exit= 'exit'
@@ -171,8 +170,8 @@ const Nav = () => {
                 zIndex="100"
             >
                 <Box>
-                    <Link
-                        as={ReachLink} 
+                    <Link 
+                        as={NavLink} 
                         className="menu-item-container"
                         activeClassName="active-menu-item"
                         to='/'
@@ -185,10 +184,10 @@ const Nav = () => {
                                 <GridItem display="flex" alignItems="flex-end">
                                     <MotionHeading  
                                         sx={menuItemStyling}
-                                        // variants={headingVariants}
-                                        // initial="hidden"
-                                        // animate="visible"
-                                        // exit= 'exit'
+                                        variants={headingVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit= 'exit'
                                     >
                                         Home
                                     </MotionHeading>
@@ -212,9 +211,9 @@ const Nav = () => {
                             </Grid>
                         </MenuItem>
                     </Link>
-                    <Link
-                        as={ReachLink} 
-                        activeClassName="active-menu-item"
+                    <Link 
+                        as={NavLink} 
+                        // activeClassName="active-menu-item"
                         to='/background'
                         sx={linkStyling}
                     >
@@ -242,8 +241,8 @@ const Nav = () => {
                             </Grid>
                         </MenuItem>
                     </Link>
-                    <Link
-                        as={ReachLink} 
+                    <Link 
+                        as={NavLink} 
                         to='/previous-shows'
                         sx={linkStyling}
                         activeClassName="active-menu-item"
@@ -272,8 +271,8 @@ const Nav = () => {
                             </Grid>
                         </MenuItem>
                     </Link>
-                    <Link
-                        as={ReachLink} 
+                    <Link 
+                        as={NavLink} 
                         to='/contact'
                         sx={linkStyling}
                         activeClassName="active-menu-item"

@@ -11,7 +11,6 @@ import { useInView } from "react-intersection-observer"
 import useFetch from '../../actions/usefetch';
 
 
-
 const PrevShowsSingle = () => {
     const missionDescription = {
         marginBottom: "0",
@@ -324,7 +323,7 @@ const PrevShowsSingle = () => {
                     </GridItem>
                     <GridItem height="100%">
                         <Flex sx={imageContainerStyling} flexDir="column" alignItems="flex-end" justifyContent="center">
-                            <Flex justifyContent="center" overflow="hidden" borderRadius="1rem">
+                            <Box display="inline-block" overflow="hidden" borderRadius="1rem">
                                 <MotionImage
                                     // src={activeShow.portraitImage}
                                     src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.portraitImage}`)}
@@ -335,10 +334,105 @@ const PrevShowsSingle = () => {
                                     exit="exit"
                                     whileHover="hover"
                                 />
-                            </Flex>
+                            </Box>
                         </Flex>
                     </GridItem>
-                </Grid>
+                    </Grid>
+
+                    {/* <Grid sx={gridStyling}>
+                        <GridItem width="100%" height="100%" order={{ base: "2", sm: "2", md: "2", lg:"1", xl:"1" }}>
+                            <Flex flexDir="column" alignContent="center" height="100%">
+                                <Box sx={missionTextContainer} order={{ base: "2", sm: "2", md: "2", lg:"1", xl:"1" }} paddingBottom="0">
+                                    <Grid className="vertical-seperator" gridTemplateColumns = "1fr 1fr">
+                                        <MotionGridItem 
+                                            borderRight="1px solid #000" 
+                                            // height="50px"
+                                            variants={borderVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit" 
+                                            />  
+                                            <GridItem>
+                                                
+                                            </GridItem>
+                                    </Grid>
+                                    <MotionHeading 
+                                        variant="h2" 
+                                        as="h2"
+                                        variants={leftHeadingVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit" 
+                                    >
+                                        Mission
+                                    </MotionHeading>
+                                    <MotionBox 
+                                        sx={serviceSeperator}
+                                        variants={seperatorVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit" 
+                                    />
+                                    <MotionText 
+                                        sx={missionDescription} 
+                                        variant="p"
+                                        variants={rightTextVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit"
+                                    >
+                                        {activeShow.description}
+                                    </MotionText>
+                                    <Grid gridTemplateColumns = "1fr 1fr" className="vertical-seperator">
+                                        <MotionGridItem 
+                                            borderRight="1px solid #000" 
+                                            // height="50px"
+                                            variants={borderVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"    
+                                            />  
+                                            <GridItem>
+                                                
+                                            </GridItem>
+                                    </Grid>
+                                </Box>
+                                <Box order={{ base: "1", sm: "1", md: "1", lg:"2", xl:"2" }}>
+                                    <Box sx={imageContainer}>
+                                        <MotionImage
+                                            src={Druhill}
+                                            sx={landscpaeImageStyling}
+                                            variants={bottomLandscapeImageVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                            whileHover="hover"
+                                        
+                                        />
+                                    </Box>
+                                </Box>
+                            </Flex>
+                        </GridItem>
+                        <GridItem height="100%" order={{ base: "1", sm: "1", md: "1", lg:"2", xl:"2" }}>
+                            <Flex sx={imageContainerStyling} flexDir="column" alignItems="center" justifyContent="center">
+                                <Box>
+                                    <Box sx={imageContainer}>
+                                        <MotionImage
+                                            src={ScorpionKingsTwo}
+                                            sx={portraitImageStyling}
+                                            variants={portraitImageVariants}
+                                            initial="hidden"
+                                            animate="visible"
+                                            exit="exit"
+                                            whileHover="hover"
+                                        />
+                                    </Box>
+                                </Box>
+                            </Flex>
+                        </GridItem>
+                    </Grid> */}
+
+                    
                 <MotionFlex 
                     marginX="2rem" 
                     marginBottom="2rem"
