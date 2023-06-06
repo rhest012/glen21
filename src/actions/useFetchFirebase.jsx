@@ -43,3 +43,5 @@ export const useFetchFirebase = (collectionName) => {
 
   return data;
 };
+
+export default useFetchFirebase

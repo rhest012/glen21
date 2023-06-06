@@ -1,12 +1,12 @@
 import React from 'react'
 import Marquee from "react-fast-marquee";
 import { Box, Flex, Heading } from '@chakra-ui/react';
-import { useFetchFirebase } from '../../actions/useFetchFirebase'
+import  useFetchFirebase from '../../actions/useFetchFirebase'
 
 // Framer Motion
 import { easeIn, motion } from 'framer-motion';
 import { useLocation } from 'react-router-dom';
-import useFetch from '../../actions/usefetch';
+
 
 const Header = () => {
     const MotionHeading = motion(Heading);
