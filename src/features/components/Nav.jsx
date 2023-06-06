@@ -10,9 +10,10 @@ import {
     Text,
     Grid,
     GridItem,
+    Link,
   } from '@chakra-ui/react'
 
-import { NavLink, Link as ReachNavLink} from 'react-router-dom'
+import { Link as ReachLink} from 'react-router-dom'
 import placeHolderImage from "../../assets/previousShows/Glen21_ScorpionKings.jpg"
 import NickFest from '../../assets/Header/NickFest.jpg'
 import TheDome from '../../assets/Header/TheDome.jpg'
@@ -140,7 +141,7 @@ const Nav = () => {
             paddingY="1rem"
             height="10vh"
         >
-            <NavLink as={ReachNavLink} to='/'>
+            <Link as={ReachLink} to='/'>
                 <MotionImage
                     src={Glen21Logo}
                     width="150px"
@@ -149,7 +150,7 @@ const Nav = () => {
                     // animate="visible"
                     // exit= 'exit'
                 />
-            </NavLink>
+            </Link>
         <Menu 
             closeOnSelect="true"
         >
@@ -170,8 +171,8 @@ const Nav = () => {
                 zIndex="100"
             >
                 <Box>
-                    <NavLink 
-                        as={ReachNavLink} 
+                    <Link
+                        as={ReachLink} 
                         className="menu-item-container"
                         activeClassName="active-menu-item"
                         to='/'
@@ -210,9 +211,9 @@ const Nav = () => {
                                 </GridItem>
                             </Grid>
                         </MenuItem>
-                    </NavLink>
-                    <NavLink 
-                        as={ReachNavLink} 
+                    </Link>
+                    <Link
+                        as={ReachLink} 
                         activeClassName="active-menu-item"
                         to='/background'
                         sx={linkStyling}
@@ -240,9 +241,9 @@ const Nav = () => {
                                 </GridItem>
                             </Grid>
                         </MenuItem>
-                    </NavLink>
-                    <NavLink 
-                        as={ReachNavLink} 
+                    </Link>
+                    <Link
+                        as={ReachLink} 
                         to='/previous-shows'
                         sx={linkStyling}
                         activeClassName="active-menu-item"
@@ -270,9 +271,9 @@ const Nav = () => {
                                 </GridItem>
                             </Grid>
                         </MenuItem>
-                    </NavLink>
-                    <NavLink 
-                        as={ReachNavLink} 
+                    </Link>
+                    <Link
+                        as={ReachLink} 
                         to='/contact'
                         sx={linkStyling}
                         activeClassName="active-menu-item"
@@ -300,7 +301,7 @@ const Nav = () => {
                                 </GridItem>
                             </Grid>
                         </MenuItem>
-                    </NavLink>
+                    </Link>
                 </Box>
                 <Box>
                     <Flex padding="1rem" width="100%" height="100%" justifyContent="flex-end" alignContent="flex-end">

@@ -22,10 +22,12 @@ const Footer = () => {
 
   return (
     <MotionBox 
+      as="footer"
       background="#000" 
       borderTop="1px solid #000" 
       paddingY="1rem"
       height="60px"
+      marginBottom="0"
       variants= {footerVariants}
       initial="hidden"
       animate="visible"

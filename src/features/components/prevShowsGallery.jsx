@@ -191,10 +191,10 @@ const PrevShowsGallery = ( {prevShows} ) => {
                   variant="p" 
                   textAlign="center" 
                   paddingY="1rem"
-                  // variants={textVariants}
-                  // initial="hidden"
-                  // animate="visible"
-                  // exit="exit"
+                  variants={textVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
                 >
                   Over the years, Glen21 has produced events of various magnitudes across the African continent, featuring Grammy Award-winning artists. From conceptualizing to marketing and execution, Glen21 has a proven track record of delivering world-class events that meet and exceed all stakeholders' expectations.
                 </MotionText>
@@ -234,19 +234,19 @@ const PrevShowsGallery = ( {prevShows} ) => {
                     height="100vh"
                     justifyContent="center"
                     alignItems="center"
-                    // variants={imageContainerVariants}
-                    // initial="hidden"
-                    // animate="visible"
-                    // exit="exit"
+                    variants={imageContainerVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
               
                   >
                     <Link to="/previous-shows/scorpion-kings">
                       <MotionFlex 
                         flexDir="column" 
-                        // variants={imageChildrenVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        // exit="exit"  
+                        variants={imageChildrenVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
                       >
                         <Flex
                           sx={imageContainerStyle}
@@ -270,10 +270,10 @@ const PrevShowsGallery = ( {prevShows} ) => {
                     <Link to="/previous-shows/toni-braxton">
                       <MotionFlex 
                         flexDir="column" 
-                        // variants={imageChildrenVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        // exit="exit"  
+                        variants={imageChildrenVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
                       >
                         <Flex
                           sx={imageContainerStyle}
@@ -324,9 +324,9 @@ const PrevShowsGallery = ( {prevShows} ) => {
                       <MotionFlex 
                         flexDir="column" 
                         variants={imageChildrenVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        // exit="exit"  
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
                       >
                         <Flex
                           sx={imageContainerStyle}
@@ -352,10 +352,10 @@ const PrevShowsGallery = ( {prevShows} ) => {
                     <Link to="/previous-shows/soul-fest">
                       <MotionFlex 
                         flexDir="column" 
-                        // variants={imageChildrenVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        // exit="exit"  
+                        variants={imageChildrenVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
                       >
                         <Flex
                           sx={imageContainerStyle}
@@ -381,10 +381,10 @@ const PrevShowsGallery = ( {prevShows} ) => {
                     <Link to="/previous-shows/j-cole">
                       <MotionFlex 
                         flexDir="column" 
-                        // variants={imageChildrenVariants}
-                        // initial="hidden"
-                        // animate="visible"
-                        // exit="exit"  
+                        variants={imageChildrenVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
                       >
                         <Flex
                           sx={imageContainerStyle}
