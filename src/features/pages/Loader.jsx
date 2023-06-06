@@ -73,11 +73,11 @@ const Loader = ({ setLoading }) => {
     }
 
   return (
-    <Box height="100vh" width="100vw" display="flex" flexDir="column" justifyContent="center" alignItems="center" paddingX="8rem">
-        <Grid gridTemplateColumns="50% 50%">
+    <Box height="100vh" width="100vw" display="flex" flexDir="column" justifyContent="center" alignItems="center" paddingX={{ base:"2rem", sm:"2rem", md:"2rem", lg: "4rem", xl: "8rem" }}>
+        <Grid gridTemplateColumns={{ sm:"100%", md:"100%", lg:"50% 50%", xl: "50% 50%" }} gap="2rem">
             <GridItem>
-              <Grid gridTemplateColumns="repeat(2, 1fr)" gap="1rem">
-                  <GridItem>
+              <Grid gridTemplateColumns={{ base: "100%", sm: "100%", md: "100%", lg: "repeat(2, 1fr)", xl: "repeat(2, 1fr)" }} gap="1rem">
+                  <GridItem display="flex" justifyContent="center">
                       <MotionImage
                         src={ToniBraxton}
                         height="400px"
@@ -89,7 +89,7 @@ const Loader = ({ setLoading }) => {
                         exit="exit"
                       />
                   </GridItem>
-                  <GridItem display="flex" justifyContent="space-between" flexDir="column">
+                  <GridItem display={{ base:"none", sm:"none", md:"none", lg:"flex", xl:"flex" }} justifyContent="space-between" flexDir="column">
                       <MotionImage
                         src={SwvLoader}
                         variants={imageRight}

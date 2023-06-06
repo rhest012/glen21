@@ -98,7 +98,7 @@ const BoysIIMen = () => {
     }
 
   return (
-    <Box marginTop="2rem" height="91vh">
+    <Box marginTop="2rem" height="91vh" data-scroll-section>
     <Flex marginX="2rem" flexDirection={{ base:"column", sm:"column", md:"column", lg:"row", xl:"row" }}>
     <MotionFlex 
         width={{ base:"100%", md:"100%", lg:"70", xl:"70%" }}

@@ -13,13 +13,19 @@ import BoysIIMen from '../pages/BoysIIMen';
 import About from '../pages/About';
 import Contact from '../pages/Contact'
 import Loader from '../pages/Loader';
-
+import PreviousShows from '../pages/PreviousShows';
+import PrevShowsSingle from '../pages/PrevShowsSingle';
+// import ScorpionKings from '../pages/ScorpionKings';
+// import ToniBraxton from '../pages/ToniBraxton'
+// import JCole from '../pages/JCole';
 
 // Framer Motion
 import { motion } from 'framer-motion';
 import {AnimatePresence} from 'framer-motion'
-import PreviousShows from '../pages/PreviousShows';
 import Footer from './Footer';
+import { Box } from '@chakra-ui/react';
+import useLocoScroll from '../../actions/useLocoScroll';
+import CustomCursor from './CustomCursor';
 
 
 const AnimatedRoutes = () => {
@@ -36,33 +42,57 @@ const AnimatedRoutes = () => {
         ? document.querySelector("body").classList.add("loading")
         : document.querySelector("body").classList.remove("loading");
     }, [loading]);
-  
-  return (
-    <AnimatePresence mode='wait'>
-      {loading ? (
-        <motion.div key="loader">
-          <Loader setLoading={setLoading} />
-        </motion.div>
-      ) : (
-      <>
-        {!loading && (
-       <>
-       <Nav/>
-       <Routes location={location} key={location.pathname}>
-          <Route path="/" element ={<Home/>}/>
-          <Route path="/boys" element ={<BoysIIMen/>}/>
-          <Route path="/tamia" element ={<Tamia/>}/>
-          <Route path="/background" element ={<About/>}/>
-          <Route path="/previous-shows" element ={<PreviousShows/>}/>
 
-          <Route path="/contact" element ={<Contact/>}/>
-        </Routes>
-        <Footer/>
+    useLocoScroll();
+    
+
+    // useEffect(() => {
+    //   const scrollToTop = () => {
+    //     window.scrollTo(0, 0);
+    //   };
+  
+    //   // Add event listener to scroll to top when the route changes
+    //   window.addEventListener('scroll', scrollToTop);
+  
+    //   // Clean up the event listener on unmount
+    //   return () => {
+    //     window.removeEventListener('scroll', scrollToTop);
+    //   };
+    // }, []);
+
+  return (
+    <>
+      <CustomCursor/>
+      <AnimatePresence mode='wait'>
+        {loading ? (
+          <motion.div key="loader">
+            <Loader setLoading={setLoading} />
+          </motion.div>
+        ) : (
+        <>
+          {!loading && (
+        <>
+          <Box className="main-container" id="main-container"
+            data-scroll-container
+          >
+          <Nav/>
+          <Routes location={location} key={location.pathname}>
+              <Route path="/" element ={<Home/>}/>
+              <Route path="/boys" element ={<BoysIIMen/>}/>
+              <Route path="/tamia" element ={<Tamia/>}/>
+              <Route path="/background" element ={<About/>}/>
+              <Route path="/previous-shows" element ={<PreviousShows/>}/>
+                <Route path="/previous-shows/:id" element ={<PrevShowsSingle/>}/>
+              <Route path="/contact" element ={<Contact/>}/>
+            </Routes>
+            <Footer/>
+          </Box>
+          </>
+          )}
         </>
         )}
-      </>
-      )}
-    </AnimatePresence>
+      </AnimatePresence>
+    </>
   )
 }
 

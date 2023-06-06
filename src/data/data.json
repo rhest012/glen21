@@ -16,32 +16,97 @@
             "url": "/background"
         }
     ],
-    "prev-shows": [
+    "prevShows": [
         {
             "title": "Scorpion Kings",
-            "image": "Glen21_ScorpionKings.jpg"
+            "id": "scorpion-kings",
+            "folder": "scorpionKings",
+            "portraitImage": "SK-Portrait.jpg",
+            "landscapeImage": "Glen21_ScorpionKings.jpg",
+            "galleryImageOne": "SK-1.jpg",
+            "galleryImageTwo": "SK-2.jpg",
+            "galleryImageThree": "SK-3.jpg",
+            "galleryImageFour": "SK-4.jpg",
+            "galleryImageFive": "SK-5.jpg",
+            "galleryImageSix": "SK-6.jpg",
+            "description": "Two South African DJs joined forces and toured South Africa, The Scorpion Kings Tour kicked off last in 2022 and each show was packed with energy, beats and dance moves to amaze.  The concerts were held in Bloemfontein, Polokwane, Johannesburg and Rustenburg."
         },
         {
             "title": "Toni Braxton",
-            "image": "Glen21_ToniBraxton.jpg"
+            "id": "toni-braxton",
+            "folder": "toniBraxton",
+            "portraitImage": "TB-Portrait.jpg",
+            "landscapeImage": "Glen21_ToniBraxton.jpg",
+            "galleryImageOne": "TB-1.jpg",
+            "galleryImageTwo": "TB-2.jpg",
+            "galleryImageThree": "TB-3.jpg",
+            "galleryImageFour": "TB-4.jpg",
+            "galleryImageFive": "TB-5.jpg",
+            "galleryImageSix": "TB-6.jpg",
+            "galleryImageSeven": "TB-7.jpg",
+            "galleryImageEight": "TB-8.jpg",
+            "description": " Two South African DJs joined forces and toured South Africa, The Scorpion Kings Tour kicked off last in 2022 and each show was packed with energy, beats and dance moves to amaze.  The concerts were held in Bloemfontein, Polokwane, Johannesburg and Rustenburg."
         },
         {
             "title": "J Cole",
-            "image": "Glen21_Jcole.jpg"
+            "id": "j-cole",
+            "folder": "jCole",
+            "portraitImage": "JC-Portrait.jpg",
+            "landscapeImage": "JC-2.jpg",
+            "galleryImageOne": "JC-1.jpg",
+            "galleryImageTwo": "JC-3.jpg",
+            "galleryImageThree": "JC-4.jpg",
+            "galleryImageFour": "JC-5.jpg",
+            "galleryImageFive": "JC-6.jpg",
+            "galleryImageSix": "JC-7.jpg",
+            "description": "A marriage of brands and collaboration from the country. The Dome in Johannesburg Hosted  Castle Lite Unlock 2016 which was met with an eager crowd selling out the event in only a few (hours). The campaign was met with Glen21’s collaboration in introducing an all-round production from acquiring the artist, local talent management and the execution of talent management."
         },
         {
             "title": "BAS",
-            "image" : "Glen21_BAS.jpg"
+            "id": "bas",
+            "folder": "bas",
+            "portraitImage": "Bas-portrait.jpg",
+            "landscapeImage": "Glen21_BAS.jpg",
+            "galleryImageOne": "Bas-1.jpg",
+            "galleryImageTwo": "Bas-2.jpg",
+            "galleryImageThree": "Bas-3.jpg",
+            "galleryImageFour": "Bas-4.jpg",
+            "galleryImageFive": "Bas-5.jpg",
+            "galleryImageSix": "Bas-6.jpg",
+            "galleryImageSeven": "Bas-7.jpg",
+            "galleryImageEight": "Bas-8.jpg",
+            "description": "The “Night Job “ artist who’s signed with Dreamville, who made a surprise appearance at the Castle Lite Unlock at the Dome in 2016, decided to grace South Africa for his “Milky Way Tour” in December 2018.  The sold out shows were held in Durban, Cape Town and Johannesburg.  He’s a huge fan of South Africa and we’re sure we’ll be seeing him again soon."
         },
         {
             "title": "Soul Fest",
-            "image": "Glen21_SoulFest.jpg"
+            "id": "soul-fest",
+            "folder": "soulFest",
+            "portraitImage": "SoulFest-Portrait.jpg",
+            "landscapeImage": "SoulFest-3.jpg",
+            "galleryImageOne": "SoulFest-1.jpg",
+            "galleryImageTwo": "SoulFest-2.jpg",
+            "galleryImageThree": "SoulFest-3.jpg",
+            "galleryImageFour": "SoulFest-4.jpg",
+            "galleryImageFive": "SoulFest-5.jpg",
+            "galleryImageSix": "SoulFest-6.jpg",
+            "galleryImageSeven": "SoulFest-7.jpg",
+            "description": "In 2018, Glen 21 Entertainment presented Soul Fest, delivering the best throwbacks to the ultimate RnB fans with legendary RnB bands TLC, Dru Hill, and SWV. Soul Fest was dedicated to bringing the music back to the people and guiding them down memory lane with each and every song."
         },
         {
             "title": "Chance The Rapper",
-            "image": "Glen21_Chance.jpg"
+            "id": "chance-the-rapper",
+            "folder": "chance",
+            "portraitImage": "Chance_01.jpg",
+            "landscapeImage": "Chance-8.jpg",
+            "galleryImageOne": "Chance-1.jpg",
+            "galleryImageTwo": "Chance-2.jpg",
+            "galleryImageThree": "Chance-3.jpg",
+            "galleryImageFour": "Chance-4.jpg",
+            "galleryImageFive": "Chance-5.jpg",
+            "galleryImageSix": "Chance-6.jpg",
+            "galleryImageSeven": "Chance-7.jpg",
+            "description": " The most electrifying part of this campaign was introducing new ways to bring artists closer to the fans. Castle Lite Unlocks 2018 was coupled with SA’s independent artists’ Nadia Nakai, Shane Eagle and Frank Casino. The event went into a detailed Pre-production inviting opportunity to collaborate and creating intensifying moments of enjoyment."
         }
-
         
     ]
 }

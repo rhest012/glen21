@@ -20,6 +20,7 @@ const theme = extendTheme ({
               fontSize: { base:"2.44rem", md:"3.05rem", lg:"3.05rem", xl:"3.05rem"} ,
               textTransform: "uppercase",
               letterSpacing: "1.5px",
+              padding: "1rem"
               
             },
             h3: {
@@ -51,7 +52,7 @@ const theme = extendTheme ({
               
             },
             pageHeading: {
-            fontSize:"4.76rem",
+            fontSize:{ base: "3.81rem",  xl:"4.76rem"},
             textTransform:"uppercase",
             textAlign:{base:"center", sm:"left", md:"left", lg:"left", x:"lg"} ,
             color:"#000",
@@ -64,6 +65,7 @@ const theme = extendTheme ({
             p:{
               fontWeight: 300,
               fontSize: "1rem",
+              padding: "1rem, 0"
             }
           }
         },

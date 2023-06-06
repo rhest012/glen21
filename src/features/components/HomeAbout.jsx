@@ -56,7 +56,14 @@ const HomeAbout = () => {
       opacity: 1,
       y: 0,
       transition: {delay: 1, duration: 1}
-    }
+    },
+    hover: {
+      scale: 1.1, // Increase the scale to zoom in (e.g., 1.2 for 20% zoom)
+      transition: {
+        duration: 1, // Adjust the duration of the zoom animation
+        ease: 'easeInOut', // Choose the desired easing function
+      },
+    },
   }
 
   const borderBottomVariants = {
@@ -135,16 +142,20 @@ const HomeAbout = () => {
         </Flex>
       </GridItem>
       <GridItem height="100%" paddingY="2rem">
-        <MotionImage
-          src={HomeImage}
-          height={{ base:"90%", sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
-          width="auto"
-          marginX="auto"
-          marginY="auto"
-          variants={imageVariants}
-          initial="hidden"
-          animate="visible"
-        />
+        <Box overflow="hidden" borderRadius="1rem" display="inline-block">
+          <MotionImage
+            src={HomeImage}
+            height={{ base:"90%", sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
+            width="auto"
+            marginX="auto"
+            marginY="auto"
+            variants={imageVariants}
+            initial="hidden"
+            animate="visible"
+            whileHover="hover"
+            borderRadius="1rem"
+          />
+        </Box>
       </GridItem>
     </Grid>
     </Box>

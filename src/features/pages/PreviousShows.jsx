@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import Header from '../components/Header'
 import PrevShowsGallery from '../components/prevShowsGallery'
 
@@ -6,8 +7,10 @@ const PreviousShows = () => {
 
   return (
     <> 
-      <Header />
-      <PrevShowsGallery/>
+      <Box data-scroll-section>
+        <Header />
+        <PrevShowsGallery/>
+      </Box>
     </>
   )
 }

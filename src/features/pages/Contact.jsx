@@ -110,7 +110,14 @@ const Contact = () => {
         exit: {
             opacity: 0,
             transition: {delay: 1, duration: 1}
-        }
+        },
+        hover: {
+            scale: 1.1, // Increase the scale to zoom in (e.g., 1.2 for 20% zoom)
+            transition: {
+              duration: 1, // Adjust the duration of the zoom animation
+              ease: 'easeInOut', // Choose the desired easing function
+            },
+          },
 
       }
     
@@ -165,7 +172,7 @@ const Contact = () => {
 
 
   return (
-   <>
+   <Box data-scroll-section>
     <Header/>
     <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}} width="100%" height="60vh"> 
         <GridItem>
@@ -178,17 +185,20 @@ const Contact = () => {
                     animate="visible"
                     exit="exit"
                 />
-                <MotionImage
-                    src={ContactImage}
-                    margin="auto"
-                    height="375px"
-                    width="600px"
-                    borderRadius="1rem"
-                    variants={imageVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                />
+                <Box marginLeft="2rem" width="600px" overflow="hidden" borderRadius="1rem">
+                    <MotionImage
+                        src={ContactImage}
+                        margin="auto"
+                        height="375px"
+                        width="600px"
+                        borderRadius="1rem"
+                        variants={imageVariants}
+                        initial="hidden"
+                        whileHover="hover"
+                        animate="visible"
+                        exit="exit"
+                    />
+                </Box>
                     <MotionBox
                         height="50px"
                         borderRight="1px solid #000"
@@ -302,7 +312,7 @@ const Contact = () => {
             </Flex>
         </GridItem>
     </Grid>
-   </>
+   </Box>
   )
 }
 

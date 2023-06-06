@@ -1,5 +1,4 @@
 import React from 'react'
-import ContactHeader from '../../assets/headers/Contact_Header.jpg'
 import Marquee from "react-fast-marquee";
 import { Box, Flex, Heading } from '@chakra-ui/react';
 import { useFetchFirebase } from '../../actions/useFetchFirebase'

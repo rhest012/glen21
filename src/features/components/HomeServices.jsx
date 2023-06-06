@@ -7,15 +7,18 @@ import Underline from '../../assets/border.svg'
 
 const HomeServices = () => {
     const servicesStyle = {
-        width:"100vw", 
+        width:"90%", 
+        marginX:"auto",
         flexDirection: "column",
         marginY:{ sm:"1.5rem", md:"1.5rem", lg:"auto", xl:"auto"},
         flexWrap: "wrap",
         justifyContent: "center",
+        alignItems: "center",
         height: "65vh",
         paddingY: "4rem",
         paddingX: "2rem",
         background:"#fff", 
+        borderRadius: "1rem"
       }
   
     const serviceDescriptionStyle = {
@@ -91,9 +94,9 @@ const HomeServices = () => {
   return (
     <Box 
       marginTop="6rem" 
-      paddingX="2rem" 
+      paddingX={{base: "0", sm:"0", md:"0", lg:"2rem", xl:"2rem"}} 
       paddingY="6rem" 
-      height={{sm:"100%", md:"100%"}}
+      height={{sm:"100%", md:"100%", lg:"100%" , xl: "100%"}}
       backgroundImage={serviceBackground}
       ref={ref}
     >
@@ -113,22 +116,23 @@ const HomeServices = () => {
               >
                   Event Consultation
               </MotionHeading>
-            <MotionBox
-             sx={serviceSeperator}
-             variants={borderVariants}
-             initial="hidden"
-              animate="visible"
-            />
-            <MotionText 
-              sx={serviceDescriptionStyle} 
-              variant="p"
-              variants= {textVariants}
+              <MotionBox
+              sx={serviceSeperator}
+              variants={borderVariants}
               initial="hidden"
-              animate="visible"
-            >
-                Event consultation is one of Glen21’s primary functions. We provide strategic coordination and production management for multiple brands.
-            </MotionText>
+                animate="visible"
+              />
+              <MotionText 
+                sx={serviceDescriptionStyle} 
+                variant="p"
+                variants= {textVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                  Event consultation is one of Glen21’s primary functions. We provide strategic coordination and production management for multiple brands.
+              </MotionText>
             </MotionFlex>
+
             <MotionFlex 
               sx={servicesStyle}
               variants={backgroundVariants}
@@ -155,6 +159,7 @@ const HomeServices = () => {
                 Glen21 has solidified relationships with numerous artists across the spectrum and is proficient in align brands with talent.
             </MotionText>
             </MotionFlex>
+
             <MotionFlex 
               sx={servicesStyle}
               variants={backgroundVariants}
