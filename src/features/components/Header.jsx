@@ -21,7 +21,7 @@ const Header = () => {
         visible: {
           opacity: 1,
           x: 0,
-          transition: {delay: 1.5, duration: 1, ease: easeIn}
+          transition: {delay: 1.3, duration: 1, ease: easeIn}
         },
         exit: {
             opacity: 0,

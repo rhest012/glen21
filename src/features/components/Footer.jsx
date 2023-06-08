@@ -7,23 +7,25 @@ const Footer = () => {
   const MotionBox = motion(Box);
 
   const footerVariants = {
-    initial: {
+    hidden: {
       opacity: 0,
+      y: 10000,
     },
     visible: {
       opacity: 1,
-      transition: {delay: 5, duration: 1, }
+      y: 0,
+      transition: {delay: 3, duration: 1, }
     },
     exit: {
         height: 0,
-        transition: {delay: 5, duration: 1}
+        transition: {delay: 3, duration: 1}
     }
   };
 
   return (
     <MotionBox 
       as="footer"
-      background="#000" 
+      backgroundColor="#000" 
       borderTop="1px solid #000" 
       paddingY="1rem"
       height="60px"
