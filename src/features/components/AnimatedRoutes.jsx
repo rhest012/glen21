@@ -5,6 +5,7 @@ import { Routes, Route, useLocation } from 'react-router-dom';
 // Components
 import Navbar from './Navbar'
 import Nav from './Nav';
+import FullNav from './FullNav';
 
 // Pages
 import Home from '../pages/Home';
@@ -16,9 +17,6 @@ import Contact from '../pages/Contact'
 import Loader from '../pages/Loader';
 import PreviousShows from '../pages/PreviousShows';
 import PrevShowsSingle from '../pages/PrevShowsSingle';
-// import ScorpionKings from '../pages/ScorpionKings';
-// import ToniBraxton from '../pages/ToniBraxton'
-// import JCole from '../pages/JCole';
 
 // Framer Motion
 import { motion } from 'framer-motion';
@@ -47,19 +45,7 @@ const AnimatedRoutes = () => {
     useLocoScroll();
     
 
-    // useEffect(() => {
-    //   const scrollToTop = () => {
-    //     window.scrollTo(0, 0);
-    //   };
   
-    //   // Add event listener to scroll to top when the route changes
-    //   window.addEventListener('scroll', scrollToTop);
-  
-    //   // Clean up the event listener on unmount
-    //   return () => {
-    //     window.removeEventListener('scroll', scrollToTop);
-    //   };
-    // }, []);
 
   return (
     <>
@@ -77,7 +63,9 @@ const AnimatedRoutes = () => {
             data-scroll-container
           >
           <Nav/>
-          <Routes location={location} key={location.pathname}>
+          <Routes 
+            // location={location} key={location.pathname}
+          >
               <Route path="/" element ={<Home/>}/>
               <Route path="/boys" element ={<BoysIIMen/>}/>
               <Route path="/hey-neighbour" element ={<HeyNeighbour/>}/>
