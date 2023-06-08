@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <MotionBox 
       as="footer"
-      backgroundColor="#000" 
+      backgroundColor="#00000 !important" 
       borderTop="1px solid #000" 
       paddingY="1rem"
       height="60px"
@@ -35,7 +35,7 @@ const Footer = () => {
       animate="visible"
       exit="exit"
     >
-        <Text variant="p" textAlign="center" color="#fff">
+        <Text fontWeight="300" textAlign="center" color="#fff" background="#000">
             &copy; Glen21 Entertainment {new Date().getFullYear()}. A RHEST design.
         </Text>
     </MotionBox>
