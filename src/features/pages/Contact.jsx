@@ -193,41 +193,6 @@ const Contact = () => {
                         If you are looking for an agency that prides itself on being an industry leader when it comes to everything events, feel free to get in touch with the Glen21 team by dropping us a mail.
                     </MotionText>
                 </Stack>
-                {/* <Stack 
-                    width="100%"
-                    variants={formVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                >
-                    <MotionInput
-                        sx={inputStyle}
-                        type='text'
-                        placeholder='Full Name'
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                    />
-                    <MotionInput
-                        sx={inputStyle}
-                        type="email"
-                        placeholder='Email Address'
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                    />
-                    
-                    <MotionTextarea
-                        placeholder='Message'
-                        sx={inputStyle}
-                        variants={formVariants}
-                        initial="hidden"
-                        animate="visible"
-                        exit="exit"
-                    />    
-                </Stack> */}
                 
                 <Flex flexDirection={{ base:"column", sm:"column", md:"column", lg:"row", xl:"row"}} gap={{base:"1rem", sm:"1rem", md:"1rem", lg:"1rem"}} justifyContent={{ lg:"space-between", xl:"space-between"}}>
                     <MotionText 
