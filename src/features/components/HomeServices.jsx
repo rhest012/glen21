@@ -7,8 +7,8 @@ import Underline from '../../assets/border.svg'
 
 const HomeServices = () => {
     const servicesStyle = {
-        width:"90%", 
-        marginX:"auto",
+        width:"88%", 
+        marginX:{ base:"auto", sm:"auto", md:"2rem", lg:"auto",  xl:"auto"},
         flexDirection: "column",
         marginY:{ sm:"1.5rem", md:"1.5rem", lg:"auto", xl:"auto"},
         flexWrap: "wrap",
@@ -93,10 +93,7 @@ const HomeServices = () => {
 
   return (
     <Box 
-      marginTop="6rem" 
-      paddingX={{base: "0", sm:"0", md:"0", lg:"2rem", xl:"2rem"}} 
       paddingY="6rem" 
-      height={{sm:"100%", md:"100%", lg:"100%" , xl: "100%"}}
       backgroundImage={serviceBackground}
       ref={ref}
     >

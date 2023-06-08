@@ -25,12 +25,12 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {delay: 1, duration: 1}
+      transition: {delay: 0.5, duration: 1}
     },
     exit: {
       opacity: 0,
       x: 50,
-      transition: {delay: 1, duration: 1}
+      transition: {delay: 0.5, duration: 1}
     }
   }
   
@@ -43,7 +43,7 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: {delay: 1, duration: 1}
+      transition: {delay: 0.5, duration: 1}
     }
   }
 
@@ -55,7 +55,7 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {delay: 1, duration: 1}
+      transition: {delay: 0.5, duration: 1}
     },
     hover: {
       scale: 1.1, // Increase the scale to zoom in (e.g., 1.2 for 20% zoom)
@@ -74,7 +74,7 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {delay: 1, duration: 1}
+      transition: {duration: 1}
     }
   }
   
@@ -87,12 +87,12 @@ const HomeAbout = () => {
     visible: {
       opacity: 1,
       y: 0,
-      transition: {delay: 1, duration: 1}
+      transition: { duration: 1}
     }
   }
   return (
-    <Box ref={ref} marginY="8rem" marginX={{ base:"0.25rem", sm:"1rem", md:"1rem"}}>
-    <Grid gridTemplateColumns={{ base:"100", sm:"100%", md:"100%", lg:"50% 50%",  xl:"50% 50%"}}>
+    <Box ref={ref} marginY="8rem" marginX="2rem">
+    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}}>
     <GridItem height="100%"> 
         <Flex height="100%" flexDir="column" justifyContent="space-between">
           <Flex width={{base:"100%"}} justifyContent="center">
@@ -104,7 +104,7 @@ const HomeAbout = () => {
               animate="visible"
             />
           </Flex>
-          <Flex flexDir="column" paddingX="3rem" flexWrap="wrap" alignItems="center" >
+          <Flex flexDir="column" flexWrap="wrap" alignItems="center" >
             <MotionHeading 
               variant="h3" 
               as="h3" 
@@ -121,6 +121,8 @@ const HomeAbout = () => {
             <MotionText
               variant="p"
               paddingBottom="1rem"
+              paddingLeft="2.5rem"
+              paddingX= {{ base:"2rem", sm:"2rem", md:"2rem", lg:"auto", xl:"auto", }}
               textAlign="right"
               variants={textVariants}
               initial="hidden"
@@ -145,10 +147,8 @@ const HomeAbout = () => {
         <Box overflow="hidden" borderRadius="1rem" display="inline-block">
           <MotionImage
             src={HomeImage}
-            height={{ base:"90%", sm:"90%", md:"90%", lg:"90%",  xl:"400px"}}
-            width="auto"
-            marginX="auto"
-            marginY="auto"
+            margin="auto"
+            width="100%"
             variants={imageVariants}
             initial="hidden"
             animate="visible"
