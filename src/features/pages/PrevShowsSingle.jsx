@@ -14,6 +14,15 @@ import useFetch from '../../actions/usefetch';
 const PrevShowsSingle = () => {
     const missionDescription = {
         marginBottom: "0",
+        paddingY:"1rem"
+    }
+
+    const missionTextContainer = {
+        height:"100%",
+        display:"flex",
+        flexDir:"column",
+        paddingX:{ base: "2rem", sm: "2rem", md: "2rem", lg: "6rem" , xl:"6rem"},
+        paddingBottom:"1rem"
     }
 
     const gridStyling = {
@@ -28,20 +37,14 @@ const PrevShowsSingle = () => {
         }
     }
 
-    const serviceSeperator = {
-        borderTop:"1px solid #000",
-        marginLeft:"30%",
-        paddingY:"1rem",
-    }
-
     const portraitImageStyling = {
-        height:"750px",
+        height:{ base:"auto", sm:"auto", md:"auto", lg:"750px",  xl: "750px"},
         width: "auto",
         borderRadius:"1rem",
     }
     
     const landscpaeImageStyling = {
-        width:"auto",
+        width:"100%",
         borderRadius:"1rem"
     }
 
@@ -55,9 +58,9 @@ const PrevShowsSingle = () => {
     }
 
     const singleImageGalleryStyling = {
-        height:"300px",
+        height: { base:"250px", sm:"300px", md:"300px", lg: "300px", xl: "300px"},
         borderRadius:"1rem",
-        marginX:"1rem"
+        marginX:"2rem"
     }
 
 
@@ -73,7 +76,7 @@ const PrevShowsSingle = () => {
     const pageHeadingVariant = {
         hidden: {
           opacity: 0,
-          
+
         },
         visible: {
           opacity: 1,
@@ -85,7 +88,6 @@ const PrevShowsSingle = () => {
             
             transition: {delay: 1, duration: 1}
           },
-
     }
     
     const BgVariant = {
@@ -199,9 +201,6 @@ const PrevShowsSingle = () => {
             transition: {delay: 2, duration: 1}
         }
     }
-    
-
-    
 
 
     // Active page setup
@@ -215,15 +214,11 @@ const PrevShowsSingle = () => {
         activeShow = data.find(item => item.id == id)
     }
 
-   
-
-    
-
   return (
     <>
         { activeShow && (
             <>
-                <Box data-scroll-container>
+                <Box backgroundColor="#fbfcf8" data-scroll-container>
 
                     <Box borderTop="1px solid #000"> 
                         <Marquee
@@ -261,178 +256,83 @@ const PrevShowsSingle = () => {
                         exit="exit"
                     />
                     <Grid sx={gridStyling}>
-                    <GridItem width="100%" height="100%" >
-                        <Flex flexDir="column" justifyContent="space-between" alignContent="center" height="100%">
-                            <Box height="100%" display="flex" flexDir="column" justifyContent="space-between" paddingX={{ base: "2rem", sm: "2rem", md: "2rem", lg: "6rem" , xl:"6rem" }} paddingBottom="1rem">
-                                <Grid gridTemplateColumns="50% 50%" >
-                                    <MotionGridItem 
-                                        borderRight="1px solid #000" 
-                                        // height="50px"
-                                        variants={borderVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                        paddingY="0"
-
-                                    />
-                                        
-                                
-                                    <GridItem>
-                                        
-                                    </GridItem>
-                                </Grid>
-                                <MotionText 
-                                    sx={missionDescription} 
-                                    variant="p"
-                                    variants={leftTextVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                >
-                                    {activeShow.description}
-                                </MotionText>
-                                <Grid gridTemplateColumns="50% 50%" >
-                                    <MotionGridItem 
-                                        borderRight="1px solid #000" 
-                                        // height="50px"
-                                        variants={borderVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit"
-                                        paddingY="0"
-
-                                    />
-                            
-                                    <GridItem>
-                                        
-                                    </GridItem>
-                                </Grid>
-                            </Box>
-                            <Box justifyContent="center" width="100%" height="95%" overflow="hidden" borderRadius="1rem">
-                                <MotionImage
-                                    src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageOne}`)}
-                                    sx={landscpaeImageStyling}
-                                    variants={leftImageVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                    whileHover="hover"
-                                />
-                            </Box>
-                        </Flex>
-                    </GridItem>
-                    <GridItem height="100%">
-                        <Flex sx={imageContainerStyling} flexDir="column" alignItems="flex-end" justifyContent="center">
-                            <Box display="inline-block" overflow="hidden" borderRadius="1rem">
-                                <MotionImage
-                                    // src={activeShow.portraitImage}
-                                    src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.portraitImage}`)}
-                                    sx={portraitImageStyling}
-                                    variants={rightImageVariants}
-                                    initial="hidden"
-                                    animate="visible"
-                                    exit="exit"
-                                    whileHover="hover"
-                                />
-                            </Box>
-                        </Flex>
-                    </GridItem>
-                    </Grid>
-
-                    {/* <Grid sx={gridStyling}>
-                        <GridItem width="100%" height="100%" order={{ base: "2", sm: "2", md: "2", lg:"1", xl:"1" }}>
-                            <Flex flexDir="column" alignContent="center" height="100%">
-                                <Box sx={missionTextContainer} order={{ base: "2", sm: "2", md: "2", lg:"1", xl:"1" }} paddingBottom="0">
-                                    <Grid className="vertical-seperator" gridTemplateColumns = "1fr 1fr">
+                        <GridItem width="100%" height="100%" >
+                            <Flex flexDir="column" justifyContent="space-between" alignContent="center" height="100%" paddingY="1rem">
+                                <Box height="100%" display="flex" alignItems="center" justifyContent="center" flexDir="column" paddingX={{ base: "2rem", sm: "2rem", md: "2rem", lg: "6rem" , xl:"6rem" }} paddingBottom="1rem">
+                                    <Grid gridTemplateColumns="50% 50%" >
                                         <MotionGridItem 
                                             borderRight="1px solid #000" 
                                             // height="50px"
                                             variants={borderVariants}
                                             initial="hidden"
                                             animate="visible"
-                                            exit="exit" 
-                                            />  
-                                            <GridItem>
-                                                
-                                            </GridItem>
+                                            exit="exit"
+                                            paddingY="0"
+
+                                        />
+                        
+                                
+                                        <GridItem>
+                                            
+                                        </GridItem>
                                     </Grid>
-                                    <MotionHeading 
-                                        variant="h2" 
-                                        as="h2"
-                                        variants={leftHeadingVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit" 
-                                    >
-                                        Mission
-                                    </MotionHeading>
-                                    <MotionBox 
-                                        sx={serviceSeperator}
-                                        variants={seperatorVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit="exit" 
-                                    />
                                     <MotionText 
                                         sx={missionDescription} 
                                         variant="p"
-                                        variants={rightTextVariants}
+                                        variants={leftTextVariants}
                                         initial="hidden"
                                         animate="visible"
                                         exit="exit"
                                     >
                                         {activeShow.description}
                                     </MotionText>
-                                    <Grid gridTemplateColumns = "1fr 1fr" className="vertical-seperator">
+                                    <Grid gridTemplateColumns="50% 50%" >
                                         <MotionGridItem 
                                             borderRight="1px solid #000" 
                                             // height="50px"
                                             variants={borderVariants}
                                             initial="hidden"
                                             animate="visible"
-                                            exit="exit"    
-                                            />  
-                                            <GridItem>
-                                                
-                                            </GridItem>
+                                            exit="exit"
+                                            paddingY="0"
+                                        />
+                                
+                                        <GridItem>
+                                            
+                                        </GridItem>
                                     </Grid>
                                 </Box>
-                                <Box order={{ base: "1", sm: "1", md: "1", lg:"2", xl:"2" }}>
-                                    <Box sx={imageContainer}>
-                                        <MotionImage
-                                            src={Druhill}
-                                            sx={landscpaeImageStyling}
-                                            variants={bottomLandscapeImageVariants}
-                                            initial="hidden"
-                                            animate="visible"
-                                            exit="exit"
-                                            whileHover="hover"
-                                        
-                                        />
-                                    </Box>
+                                <Box justifyContent="center" width="100%" height="95%" overflow="hidden" borderRadius="1rem">
+                                    <MotionImage
+                                        src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageOne}`)}
+                                        sx={landscpaeImageStyling}
+                                        variants={leftImageVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit"
+                                        whileHover="hover"
+                                    />
                                 </Box>
                             </Flex>
                         </GridItem>
-                        <GridItem height="100%" order={{ base: "1", sm: "1", md: "1", lg:"2", xl:"2" }}>
-                            <Flex sx={imageContainerStyling} flexDir="column" alignItems="center" justifyContent="center">
-                                <Box>
-                                    <Box sx={imageContainer}>
-                                        <MotionImage
-                                            src={ScorpionKingsTwo}
-                                            sx={portraitImageStyling}
-                                            variants={portraitImageVariants}
-                                            initial="hidden"
-                                            animate="visible"
-                                            exit="exit"
-                                            whileHover="hover"
-                                        />
-                                    </Box>
+                        <GridItem height="100%">
+                            <Flex sx={imageContainerStyling} flexDir="column" alignItems="flex-end" justifyContent="center">
+                                <Box display="inline-block" overflow="hidden" borderRadius="1rem">
+                                    <MotionImage
+                                        // src={activeShow.portraitImage}
+                                        src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.portraitImage}`)}
+                                        sx={portraitImageStyling}
+                                        variants={rightImageVariants}
+                                        initial="hidden"
+                                        animate="visible"
+                                        exit="exit"
+                                        whileHover="hover"
+                                    />
                                 </Box>
                             </Flex>
                         </GridItem>
-                    </Grid> */}
-
-                    
+                    </Grid>
+                
                 <MotionFlex 
                     marginX="2rem" 
                     marginBottom="2rem"
@@ -464,10 +364,6 @@ const PrevShowsSingle = () => {
                             src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageSix}`)}
                             sx={singleImageGalleryStyling}
                         />
-                        {/* <Image
-                            src={require("../../assets/previousShows/chance/Chance-8.jpg")}
-                            sx={singleImageGalleryStyling}
-                        /> */}
                     </Marquee>
                 </MotionFlex>
                 </Box>

@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Text } from '@chakra-ui/react'
-import BoysiiMen from '../../assets/Boyz2Men_Cover.jpg'
+import HeyNeighbour from '../../assets/Hey_Neighbour_Header_Tickets.jpg'
 import { motion } from 'framer-motion'
 
 const BoysIIMen = () => {
@@ -118,7 +118,7 @@ const BoysIIMen = () => {
                 textAlign={{ base:"left", sm:"left", md:"left", lg:"right", xl:"right"}}
                 paddingBottom= {{ base:"0.5rem", sm:"0.5rem", md:"0.5rem", lg:"0", xl:"0" }}
             >
-                Boys II Men South <br/>Africa Tour
+                Hey <br/>Neighbour
             </Heading>
             <Box
                 borderBottom= {{ base:"1px solid #000", sm: "1px solid #000", md: "1px solid #000", lg:"none", xl:"none" }}
@@ -126,9 +126,7 @@ const BoysIIMen = () => {
                 display={{lg:"none", xl:"none"}}
             />
             <Text variant="p" textAlign="right">
-                Boyz II Men remains one of the most truly iconic R&B groups in the music industry history.<br/>
-                The group redefined popular R&B music and continues to create timeless hits that appeal to fans across all generations.<br/>
-                The band has penned and performed some of the most celebrated classics of the past two decades
+                Get ready for a one-of-a-kind 3-day music festival in sunny South Africa that's packed with experiences, social activities, multiple food stalls, bars, and so much more! Hey Neighbour is not just an escape from everyday pressures, it's an opportunity to connect with diverse groups of people who share a common love of music and culture.
             </Text>
         </MotionFlex>
         <Flex 
@@ -150,12 +148,10 @@ const BoysIIMen = () => {
                     >
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            31 Oct
+                            Legends Adventure Farm
                         </Heading>
-                        <Heading variant="h6" as="h6" sx={venueStyling}>
-                            Grand Arena
-                        </Heading>
-                        <Text variant="p" as="p">Cape Town</Text>
+                        <Text variant="p" as="p">Pretoria</Text>
+                        
                     </Flex>
                 </MotionBox>
                 <MotionBox 
@@ -167,12 +163,8 @@ const BoysIIMen = () => {
                 >
                     <Flex  justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            2 November
+                            9 December
                         </Heading>
-                        <Heading variant="h6" as="h6" sx={venueStyling} textAlign="right">
-                            Time Square
-                        </Heading>
-                        <Text variant="p" as="p" textAlign="right">Pretoria</Text>
                     </Flex>
                 </MotionBox>
             </Flex>
@@ -186,12 +178,8 @@ const BoysIIMen = () => {
                     >
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" sx={venueStyling}>
-                            4 November
+                            10 December
                         </Heading>
-                        <Heading variant="h6" as="h6" sx={venueStyling}>
-                            Suncity Superbowl
-                        </Heading>
-                        <Text variant="p" as="p">Sun City</Text>
                     </Flex>
                 </MotionBox>
                 <MotionBox 
@@ -203,12 +191,8 @@ const BoysIIMen = () => {
                 >
                     <Flex justifyContent="center" flexDirection="column">
                         <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            31 Oct
+                            11 December
                         </Heading>
-                        <Heading variant="h6" as="h6" textAlign="right" sx={venueStyling}>
-                            Durban ICC
-                        </Heading>
-                        <Text variant="p" as="p" textAlign="right">Durban</Text>
                     </Flex>
                 </MotionBox>
             </Flex>
@@ -218,7 +202,7 @@ const BoysIIMen = () => {
                     initial="hidden"
                     animate="visible"
                     exit="exit"
-                    href='https://www.ticketpros.co.za/portal/web/index.php/parent_event/810aa03b-d57e-d4eb-10a4-63fe581c39ac?sort_order=A-Z&category=music&province=&from=&to=' 
+                    href='https://heyneighbour.co.za/' 
                     isExternal
                     textAlign="center"
                     fontWeight="600" 
@@ -243,7 +227,7 @@ const BoysIIMen = () => {
             marginTop="2rem"
             width="100%"
             height={{ base:"130px", sm:"130px", md:"auto", lg:"400px", xl:"400px"}}
-            src={BoysiiMen}
+            src={HeyNeighbour}
             variants={imageVariants}
             initial="hidden"
             animate="visible"

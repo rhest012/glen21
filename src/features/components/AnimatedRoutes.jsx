@@ -10,6 +10,7 @@ import Nav from './Nav';
 import Home from '../pages/Home';
 import Tamia from '../pages/Tamia'
 import BoysIIMen from '../pages/BoysIIMen';
+import HeyNeighbour from '../pages/HeyNeighbour'
 import About from '../pages/About';
 import Contact from '../pages/Contact'
 import Loader from '../pages/Loader';
@@ -79,6 +80,7 @@ const AnimatedRoutes = () => {
           <Routes location={location} key={location.pathname}>
               <Route path="/" element ={<Home/>}/>
               <Route path="/boys" element ={<BoysIIMen/>}/>
+              <Route path="/hey-neighbour" element ={<HeyNeighbour/>}/>
               <Route path="/tamia" element ={<Tamia/>}/>
               <Route path="/background" element ={<About/>}/>
               <Route path="/previous-shows" element ={<PreviousShows/>}/>

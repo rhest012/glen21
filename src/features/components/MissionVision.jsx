@@ -45,10 +45,9 @@ const MissionVission = () => {
     }
     
     const portraitImageStyling = {
-        height:"750px",
+        height:{ base:"auto", sm:"auto", md:"auto", lg:"750px",  xl: "750px"},
         width: "auto",
         borderRadius:"1rem",
-        
     }
 
     const imageContainer = {

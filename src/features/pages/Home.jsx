@@ -12,7 +12,7 @@ const Home = () => {
 
   return (
     <>
-      <Box data-scroll-section>
+      <Box background="#faf9f6" data-scroll-section>
         <UpcomingEventsSwiper/>
         <UpcomingEventsTile/>
         <HomeAbout/>

@@ -14,6 +14,31 @@
             "pageName": "Background",
             "backgroundImage" : "Background_Header.jpg",
             "url": "/background"
+        },
+        {
+            "pageName": "J Cole",
+            "backgroundImage" : "J.Cole_Header.jpg",
+            "url": "/previous-shows/j-cole"
+        },
+        {
+            "pageName": "Bas",
+            "backgroundImage" : "Bas_Header.jpg",
+            "url": "/previous-shows/bas"
+        },
+        {
+            "pageName": "Toni Braxton",
+            "backgroundImage" : "Toni_Braxton_Header.jpg",
+            "url": "previous-shows/toni-braxton"
+        },
+        {
+            "pageName": "Scorpion Kings",
+            "backgroundImage" : "Scorpion_Kings_Header.jpg",
+            "url": "/previous-shows/scorpion-kings"
+        },
+        {
+            "pageName": "Chance The Rapper",
+            "backgroundImage" : "Chance_Header.jpg",
+            "url": "/previous-shows/chance-the-rapper"
         }
     ],
     "prevShows": [
@@ -96,7 +121,7 @@
             "title": "Chance The Rapper",
             "id": "chance-the-rapper",
             "folder": "chance",
-            "portraitImage": "Chance_01.jpg",
+            "portraitImage": "Chance-Portrait.jpg",
             "landscapeImage": "Chance-8.jpg",
             "galleryImageOne": "Chance-1.jpg",
             "galleryImageTwo": "Chance-2.jpg",

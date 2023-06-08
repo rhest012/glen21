@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation, Pagination, A11y, Autoplay } from 'swiper'
 import TamiaBackground from './../../assets/Tamia_Cover.jpg'
 import BiiMenBackground from './../../assets/Boyz2Men_Header.jpg'
+import HeyNeighbour from '../../assets/Hey_Neighbour_Header.jpg'
 import 'swiper/swiper-bundle.min.css';
 import 'swiper/css/autoplay';
 import '../../styles/index.css';
@@ -104,6 +105,26 @@ const UpcomingEventsSwiper = () => {
         <SwiperSlide>
         <MotionBox
             backgroundImage={BiiMenBackground}
+            variants={headerVariants}
+            initial="hidden"
+            animate="visible"
+            exit= 'exit'
+            sx={sliderContainer}
+        >
+            <Flex width="100%" height="100%" flexDirection="column" justifyContent="flex-end" alignItems={{ sm:"flex-start", md:"flex-start", lg:"flex-end", xl:"flex-end"}} >
+                <Link 
+                    sx={linkContainer}
+                    as={ReachLink} to="/boys"
+                >
+                    Explore
+                </Link>
+            </Flex>
+        </MotionBox>
+
+        </SwiperSlide>
+        <SwiperSlide>
+        <MotionBox
+            backgroundImage={HeyNeighbour}
             variants={headerVariants}
             initial="hidden"
             animate="visible"

@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "homecomingza.com",
+  "Id": "2ff62feb-5403-42d2-a218-7236f22faa01"
+}

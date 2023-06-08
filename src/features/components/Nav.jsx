@@ -19,6 +19,7 @@ import TheDome from '../../assets/Header/TheDome.jpg'
 import Swv from '../../assets/Header/SWV.jpg'
 import Glen21Logo from '../../assets/Glen_21_Logo.svg'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
 
 
 const Nav = () => {
@@ -129,9 +130,28 @@ const Nav = () => {
         }
     }
 
+    // Check if sticky header should be implemented
+    const [sticky, setSticky] = useState(false);
+
+  useEffect(() => {
+    function handleScroll() {
+      if (window.scrollY > 0) {
+        setSticky(true);
+      } else {
+        setSticky(false);
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
-    <Box maxHeight="100vh" overflow="hidden">
+    <Box maxHeight="100vh" overflow="hidden" background="#faf9f6">
         <Flex 
             justifyContent="space-between" 
             alignItems="flex-end"

@@ -6,6 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background: pink; */
+  background: #faf9f6 !important;
 }
 
 * {
@@ -24,6 +26,10 @@ code {
 /* Cursor */
 * {
   cursor: none !important;
+
+  @media (max-width: 768px) {
+    cursor: auto;
+  }
 }
 
 .cursor {
@@ -34,7 +40,7 @@ code {
   border: 1px solid #000;
   background: #000;
   pointer-events: none !important; 
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); 
   position: fixed;
   top: 0;
   left: 0;
