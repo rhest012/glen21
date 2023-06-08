@@ -30,23 +30,6 @@ const Contact = () => {
     const MotionTextarea = motion(Textarea);
     const MotionInput = motion(Input);
 
-    const pageHeadingVariant = {
-        hidden: {
-          opacity: 0,
-          
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-          transition: {delay: 1, duration: 1}
-        },
-        exit: {
-            opacity: 0,
-            
-            transition: {delay: 1, duration: 1}
-          },
-
-      }
 
     const headingVariants = {
     hidden: {
@@ -56,12 +39,12 @@ const Contact = () => {
     visible: {
         opacity: 1,
         x: 0,
-        transition: {delay: 1, duration: 1}
+        transition: {delay: 2.5, duration: 1}
     },
     exit: {
         opacity: 0,
         x: -50,
-        transition: {delay: 1, duration: 1}
+        transition: {delay: 2.5, duration: 1}
     }
     }
 
@@ -73,30 +56,14 @@ const Contact = () => {
     visible: {
         opacity: 1,
         x: 0,
-        transition: {delay: 1, duration: 1}
+        transition: {delay: 2.5, duration: 1}
     },
     exit: {
         opacity: 0,
         x: 50,
-        transition: {delay: 1, duration: 1}
+        transition: {delay: 2.5, duration: 1}
     }
     }
-
-      const BgVariant = {
-        hidden: {
-          opacity: 0,
-        },
-        visible: {
-          opacity: 1,
-          x: 0,
-          transition: {duration: 2}
-        },
-        exit: {
-            opacity: 0,
-            transition: {duration: 2}
-          },
-
-      }
 
       const imageVariants = {
         hidden: {
@@ -105,11 +72,11 @@ const Contact = () => {
         },
         visible: {
           opacity: 1,
-          transition: {delay: 1, duration: 1}
+          transition: {delay: 2, duration: 1}
         },
         exit: {
             opacity: 0,
-            transition: {delay: 1, duration: 1}
+            transition: {delay: 2, duration: 1}
         },
         hover: {
             scale: 1.1, // Increase the scale to zoom in (e.g., 1.2 for 20% zoom)
@@ -129,12 +96,12 @@ const Contact = () => {
         visible: {
           opacity: 1,
           y: 0,
-          transition: {duration: 1}
+          transition: {delay: 2, duration: 1}
         },
         exit: {
             opacity: 0,
             y: 50,
-            transition: {duration: 1}
+            transition: {delay: 2, duration: 1}
         }
       }
       
@@ -147,37 +114,24 @@ const Contact = () => {
         visible: {
           opacity: 1,
           y: 0,
-          transition: {duration: 1}
+          transition: {delay: 2, duration: 1}
         },
         exit: {
             opacity: 0,
             y: -50,
-            transition: {duration: 1}
+            transition: {delay: 2, duration: 1}
         }
-      }
-
-      const formVariants = {
-        hidden: {
-            opacity: 0,
-          },
-          visible: {
-            opacity: 1,
-            transition: {delay: 1, duration: 1}
-          },
-          exit: {
-              opacity: 0,
-              transition: {delay: 1, duration: 1}
-          }
       }
 
 
   return (
    <Box data-scroll-section>
     <Header/>
-    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"100%", lg:"50 50", xl:"50% 50%"}} width="100%" height="60vh"> 
+    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"50% 50%", lg:"50 50", xl:"50% 50%"}} height={{ base:"100%", sm:"100%", md:"100%", lg:"63vh", xl:"63vh"}} width="100%" > 
         <GridItem>
             <Flex flexDirection="column" justifyContent="center" width="100%">
                 <MotionBox
+                    zIndex="1"
                     height="50px"
                     borderRight="1px solid #000"
                     variants={borderTopVariants}
@@ -185,12 +139,11 @@ const Contact = () => {
                     animate="visible"
                     exit="exit"
                 />
-                <Box marginLeft="2rem" width="600px" overflow="hidden" borderRadius="1rem">
+                <Box overflow="hidden" borderRadius="1rem" marginX="2rem">
                     <MotionImage
                         src={ContactImage}
                         margin="auto"
-                        height="375px"
-                        width="600px"
+                        width="100%"
                         borderRadius="1rem"
                         variants={imageVariants}
                         initial="hidden"
@@ -200,6 +153,7 @@ const Contact = () => {
                     />
                 </Box>
                     <MotionBox
+                        zIndex="1"
                         height="50px"
                         borderRight="1px solid #000"
                         variants={borderBottomVariants}
