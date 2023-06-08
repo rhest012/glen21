@@ -25,6 +25,7 @@ import Footer from './Footer';
 import { Box } from '@chakra-ui/react';
 import useLocoScroll from '../../actions/useLocoScroll';
 import CustomCursor from './CustomCursor';
+import Inkabi from '../pages/Inkabi';
 
 
 const AnimatedRoutes = () => {
@@ -70,6 +71,7 @@ const AnimatedRoutes = () => {
               <Route path="/boys" element ={<BoysIIMen/>}/>
               <Route path="/hey-neighbour" element ={<HeyNeighbour/>}/>
               <Route path="/tamia" element ={<Tamia/>}/>
+              <Route path="/inkabi" element ={<Inkabi/>}/>
               <Route path="/background" element ={<About/>}/>
               <Route path="/previous-shows" element ={<PreviousShows/>}/>
                 <Route path="/previous-shows/:id" element ={<PrevShowsSingle/>}/>
