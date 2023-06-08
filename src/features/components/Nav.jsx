@@ -12,7 +12,7 @@ import {
     GridItem,
   } from '@chakra-ui/react'
 
-import { Link, NavLink, Link as ReachLink} from 'react-router-dom'
+import {Link, Link as RouterLink} from 'react-router-dom'
 import placeHolderImage from "../../assets/previousShows/Glen21_ScorpionKings.jpg"
 import NickFest from '../../assets/Header/NickFest.jpg'
 import TheDome from '../../assets/Header/TheDome.jpg'
@@ -160,7 +160,7 @@ const Nav = () => {
             paddingY="1rem"
             height="10vh"
         >
-            <NavLink as={NavLink} to='/'>
+            <Link as={RouterLink} to='/'>
                 <MotionImage
                     src={Glen21Logo}
                     width="150px"
@@ -169,7 +169,7 @@ const Nav = () => {
                     // animate="visible"
                     // exit= 'exit'
                 />
-            </NavLink>
+            </Link>
         <Menu 
             closeOnSelect="true"
         >
@@ -191,7 +191,7 @@ const Nav = () => {
             >
                 <Box>
                     <Link 
-                        as={NavLink} 
+                        as={RouterLink} 
                         className="menu-item-container"
                         activeClassName="active-menu-item"
                         to='/'
@@ -204,10 +204,6 @@ const Nav = () => {
                                 <GridItem display="flex" alignItems="flex-end">
                                     <MotionHeading  
                                         sx={menuItemStyling}
-                                        variants={headingVariants}
-                                        initial="hidden"
-                                        animate="visible"
-                                        exit= 'exit'
                                     >
                                         Home
                                     </MotionHeading>
@@ -232,8 +228,7 @@ const Nav = () => {
                         </MenuItem>
                     </Link>
                     <Link 
-                        as={NavLink} 
-                        // activeClassName="active-menu-item"
+                        as={RouterLink} 
                         to='/background'
                         sx={linkStyling}
                     >
@@ -262,7 +257,7 @@ const Nav = () => {
                         </MenuItem>
                     </Link>
                     <Link 
-                        as={NavLink} 
+                        as={RouterLink} 
                         to='/previous-shows'
                         sx={linkStyling}
                         activeClassName="active-menu-item"
@@ -292,7 +287,7 @@ const Nav = () => {
                         </MenuItem>
                     </Link>
                     <Link 
-                        as={NavLink} 
+                        as={RouterLink} 
                         to='/contact'
                         sx={linkStyling}
                         activeClassName="active-menu-item"

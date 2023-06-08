@@ -131,6 +131,21 @@
             "galleryImageSix": "Chance-6.jpg",
             "galleryImageSeven": "Chance-7.jpg",
             "description": " The most electrifying part of this campaign was introducing new ways to bring artists closer to the fans. Castle Lite Unlocks 2018 was coupled with SA’s independent artists’ Nadia Nakai, Shane Eagle and Frank Casino. The event went into a detailed Pre-production inviting opportunity to collaborate and creating intensifying moments of enjoyment."
+        },
+        {
+            "title": "Travis Scott & Bryson Tiller",
+            "id": "travis-scott-and-bryson-tiller",
+            "folder": "Travis Scott & Bryson Tiller",
+            "portraitImage": "TS-1.jpg",
+            "landscapeImage": "TS-1.jpg",
+            "galleryImageOne": "TS-2.jpg",
+            "galleryImageTwo": "TS-3.jpg",
+            "galleryImageThree": "TS-4.jpg",
+            "galleryImageFour": "TS-5.jpg",
+            "galleryImageFive": "TS-6.jpg.jpg",
+            "galleryImageSix": "TS-7.jpg",
+            "galleryImageSeven": "TS-8.jpg",
+            "description": "Castle Lite brought two international acts, US rapper Travis Scott and singer, Bryson Tiller to two cities. The first leg of the concert was at the Dome on June 15 in Johannesburg and in Polokwane on June 16 and was held at the Polokwane Cricket Club."
         }
         
     ]
