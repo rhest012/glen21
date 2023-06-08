@@ -127,7 +127,7 @@ const Contact = () => {
   return (
    <Box data-scroll-section>
     <Header/>
-    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"50% 50%", lg:"50 50", xl:"50% 50%"}} height={{ base:"100%", sm:"100%", md:"100%", lg:"63vh", xl:"63vh"}} width="100%" > 
+    <Grid gridTemplateColumns={{ base:"100%", sm:"100%", md:"50% 50%", lg:"50 50", xl:"50% 50%"}} width="100%" > 
         <GridItem>
             <Flex flexDirection="column" justifyContent="center" width="100%">
                 <MotionBox
