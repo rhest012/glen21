@@ -55,6 +55,9 @@ const UpcomingEventsTile = () => {
         color:"#fff", 
         borderRadius:"5rem", 
         fontWeight: "normal",
+        textTransform: "uppercase",
+        fontSize: "0.85rem",
+        fontWeight: "600",
         
         _hover: {
           border:"1px solid #000",
@@ -421,11 +424,11 @@ const UpcomingEventsTile = () => {
                           Purchase Tickets
                         </Button>
                       </Link>
-                      <Button 
+                      {/* <Button 
                         sx={buttonStyle}
                       >
                         Playlist
-                      </Button>
+                      </Button> */}
                     </Box>
                     </Box>
                   </Flex>
