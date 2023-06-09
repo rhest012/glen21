@@ -151,15 +151,15 @@ const PrevShowsGallery = ( {prevShows} ) => {
             };
       
             if (screenWidth < breakpoints.tiny) {
-              return '-1270vw';
+              return '-5700px';
             } else if (screenWidth < breakpoints.small) {
-              return '-920vw';
+              return '-5550px';
             } else if (screenWidth < breakpoints.medium) {
-              return '-715vw';
+              return '-5300px';
             } else if (screenWidth < breakpoints.large) {
-              return '-630vw';
+              return '-4650px';
             } else {
-              return '-325vw';
+              return '-4650px';
             }
           }
 
