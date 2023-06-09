@@ -10,6 +10,7 @@ body {
   background: #faf9f6 !important;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -67,7 +68,7 @@ code {
 /* Menu */
 
 .menu-item-container {
-  background: #fff;
+  background: #faf9f6;
   margin: 1rem 0;
   position: relative; 
   width: 100%;
@@ -100,7 +101,7 @@ code {
 }
 
 .menu-item-container:hover {
-  background: #fff;
+  background: #faf9f6;
 }
 
 .menu-item-container:hover::after { 
@@ -126,6 +127,7 @@ code {
   height: 140px;
   border-radius: 1rem;
 }
+
 
 /* Footer */
 footer {

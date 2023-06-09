@@ -12,6 +12,7 @@ import Bas from "../../assets/previousShows/Glen21_BAS.jpg"
 import Chance from "../../assets/previousShows/Glen21_Chance.jpg"
 import SoulFest from "../../assets/previousShows/Glen21_SoulFest.jpg"
 import JCole from "../../assets/previousShows/jCole/JC-2.jpg"
+import Travis from "../../assets/previousShows/Travis Scott & Bryson Tiller/TS-5.jpg"
 import { Link } from 'react-router-dom';
 
 
@@ -154,11 +155,11 @@ const PrevShowsGallery = ( {prevShows} ) => {
             } else if (screenWidth < breakpoints.small) {
               return '-920vw';
             } else if (screenWidth < breakpoints.medium) {
-              return '-615vw';
+              return '-715vw';
             } else if (screenWidth < breakpoints.large) {
-              return '-430vw';
+              return '-630vw';
             } else {
-              return '-280vw';
+              return '-325vw';
             }
           }
 
@@ -296,30 +297,6 @@ const PrevShowsGallery = ( {prevShows} ) => {
                           </Flex>
                       </MotionFlex>
                     </Link>
-                    <Link to ="/previous-shows/bas">
-                      <Flex flexDir="column">
-                        <Flex
-                          sx={imageContainerStyle}
-                          backgroundImage= {Bas}
-                          width="100px"
-                          index="2"
-                          // updateActiveImage= {index => setActiveImage (index + 1)}
-                          
-                        >
-                          <Heading variant="h2" sx={prevShowsTitleStyle}>
-                            Bas
-                          </Heading>
-                        </Flex>
-                          <Flex justifyContent="space-between">
-                            <Text margin="1rem 2rem">
-                              2017
-                            </Text>
-                            <Text margin="1rem 2rem">
-                              Read More
-                            </Text>
-                          </Flex>
-                      </Flex>
-                    </Link>
                     <Link to="/previous-shows/chance-the-rapper">
                       <MotionFlex 
                         flexDir="column" 
@@ -371,6 +348,59 @@ const PrevShowsGallery = ( {prevShows} ) => {
                           <Flex justifyContent="space-between">
                             <Text margin="1rem 2rem">
                               2018
+                            </Text>
+                            <Text margin="1rem 2rem">
+                              Read More
+                            </Text>
+                          </Flex>
+                      </MotionFlex>
+                    </Link>
+                    <Link to ="/previous-shows/bas">
+                      <Flex flexDir="column">
+                        <Flex
+                          sx={imageContainerStyle}
+                          backgroundImage= {Bas}
+                          width="100px"
+                          index="2"
+                          // updateActiveImage= {index => setActiveImage (index + 1)}
+                          
+                        >
+                          <Heading variant="h2" sx={prevShowsTitleStyle}>
+                            Bas
+                          </Heading>
+                        </Flex>
+                          <Flex justifyContent="space-between">
+                            <Text margin="1rem 2rem">
+                              2017
+                            </Text>
+                            <Text margin="1rem 2rem">
+                              Read More
+                            </Text>
+                          </Flex>
+                      </Flex>
+                    </Link>
+                    <Link to="/previous-shows/travis-scott-bryson-tiller">
+                      <MotionFlex 
+                        flexDir="column" 
+                        variants={imageChildrenVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"  
+                      >
+                        <Flex
+                          sx={imageContainerStyle}
+                          backgroundImage= {Travis}
+                          width="100px"
+                          index="4"
+                          updateActiveImage= {index => setActiveImage (index + 1)}
+                        >
+                          <Heading variant="h2" sx={prevShowsTitleStyle}>
+                            Travis Scott & Bryson Tiller
+                          </Heading>
+                        </Flex>
+                          <Flex justifyContent="space-between">
+                            <Text margin="1rem 2rem">
+                              2017
                             </Text>
                             <Text margin="1rem 2rem">
                               Read More

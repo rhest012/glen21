@@ -32,6 +32,7 @@ const Nav = () => {
         flexWrap:"wrap",
         borderTop:"none",
         colorScheme: "none",
+        background:"#faf9f6",
         _hover: {
             textDecoration: "none",
             background: "transparent",
@@ -40,7 +41,8 @@ const Nav = () => {
 
     const menuGridStyling = {
         gridTemplateColumns: { base: "100%",  sm:"100%", md:"40% 30% 30%", lg: "40% 30% 30%",  xl: "40% 30% 30%"},  
-        width:"100%"
+        width:"100%",
+        background:"#faf9f6",
     }
 
     const menuItemStyling = {
@@ -48,7 +50,12 @@ const Nav = () => {
         fontSize:"3rem",
         fontWeight:"600",
         textTransform:"uppercase",
-        maxHeight: "200px"
+        maxHeight: "200px",
+        background:"#faf9f6",
+    }
+
+    const menuItemBackground = {
+        background: "#faf9f6",
     }
 
     const menuImageStyling = {
@@ -63,7 +70,8 @@ const Nav = () => {
 
     const menuItemContainerStyling = {
         display:"flex", 
-        alignItems:"flex-end"
+        alignItems:"flex-end",
+        background:"#faf9f6",
     }
 
     const menuImageContainerStyling = {
@@ -173,7 +181,7 @@ const Nav = () => {
         <Menu 
             closeOnSelect="true"
         >
-            <MenuButton as="button" textSize="2.33rem" textTransform="uppercase"> 
+            <MenuButton as="button" textSize="2.33rem" textTransform="uppercase" border="none"> 
                 <MotionHeading 
                     variant="h6"
                     variants={menuButtonVariants}
@@ -188,8 +196,9 @@ const Nav = () => {
                 width="100vw"
                 height="91vh"
                 zIndex="100"
+                background="#faf9f6"
             >
-                <Box>
+                <Box background="#faf9f6">
                     <Link 
                         as={RouterLink} 
                         className="menu-item-container"
@@ -199,6 +208,7 @@ const Nav = () => {
                     >
                         <MenuItem  
                             className="menu-item-container"
+                            sx={menuItemBackground}
                         >
                             <Grid sx={menuGridStyling}>
                                 <GridItem display="flex" alignItems="flex-end">
@@ -234,6 +244,7 @@ const Nav = () => {
                     >
                         <MenuItem 
                             className="menu-item-container"
+                            sx={menuItemBackground}
                         >
                             <Grid sx={menuGridStyling}>
                                 <GridItem display="flex" alignItems="flex-end">
@@ -264,6 +275,7 @@ const Nav = () => {
                     >
                         <MenuItem 
                             className="menu-item-container"
+                            sx={menuItemBackground}
                         >
                             <Grid sx={menuGridStyling}>
                                 <GridItem display="flex" alignItems="flex-end">
@@ -294,6 +306,7 @@ const Nav = () => {
                     >
                         <MenuItem 
                             className="menu-item-container"
+                            sx={menuItemBackground}
                         >
                             <Grid sx={menuGridStyling}>
                                 <GridItem display="flex" alignItems="flex-end">
@@ -317,7 +330,7 @@ const Nav = () => {
                         </MenuItem>
                     </Link>
                 </Box>
-                <Box>
+                <Box background="#faf9f6">
                     <Flex padding="1rem" width="100%" height="100%" justifyContent="flex-end" alignContent="flex-end">
                         <Text variant="p"  width="100%" height="100%">
                             Africa's premium eventing agency since 2008

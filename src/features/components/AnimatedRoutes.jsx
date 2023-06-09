@@ -3,9 +3,7 @@ import { useEffect, useState } from 'react';
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 // Components
-import Navbar from './Navbar'
 import Nav from './Nav';
-import FullNav from './FullNav';
 
 // Pages
 import Home from '../pages/Home';

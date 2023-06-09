@@ -333,39 +333,39 @@ const PrevShowsSingle = () => {
                         </GridItem>
                     </Grid>
                 
-                <MotionFlex 
-                    marginX="2rem" 
-                    marginBottom="2rem"
-                    variants={ImageCarouselVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                >
-                    <Marquee
-                        speed = "100"
+                    <MotionFlex 
+                        marginX="2rem" 
+                        marginBottom="2rem"
+                        variants={ImageCarouselVariants}
+                        initial="hidden"
+                        animate="visible"
+                        exit="exit"
                     >
-                        <Image
-                            src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageTwo}`)}
-                            sx={singleImageGalleryStyling}
-                        />
-                        <Image
-                            src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageThree}`)}
-                            sx={singleImageGalleryStyling}
-                        />
-                        <Image
-                            src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageFour}`)}
-                            sx={singleImageGalleryStyling}
-                        />
-                        <Image
-                            src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageFive}`)}
-                            sx={singleImageGalleryStyling}
-                        />
-                        <Image
-                            src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageSix}`)}
-                            sx={singleImageGalleryStyling}
-                        />
-                    </Marquee>
-                </MotionFlex>
+                        <Marquee
+                            speed = "100"
+                        >
+                            <Image
+                                src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageTwo}`)}
+                                sx={singleImageGalleryStyling}
+                            />
+                            <Image
+                                src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageThree}`)}
+                                sx={singleImageGalleryStyling}
+                            />
+                            <Image
+                                src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageFour}`)}
+                                sx={singleImageGalleryStyling}
+                            />
+                            <Image
+                                src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageFive}`)}
+                                sx={singleImageGalleryStyling}
+                            />
+                            <Image
+                                src={require(`../../assets/previousShows/${activeShow.folder}/${activeShow.galleryImageSix}`)}
+                                sx={singleImageGalleryStyling}
+                            />
+                        </Marquee>
+                    </MotionFlex>
                 </Box>
             </>
         )}
