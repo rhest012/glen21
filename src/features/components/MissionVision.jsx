@@ -541,7 +541,7 @@ const MissionVission = () => {
                             animate="visible"
                             exit="exit" 
                         >
-                            Mission
+                            Credentials
                         </MotionHeading>
                         <MotionBox 
                             sx={serviceSeperator}
@@ -558,7 +558,7 @@ const MissionVission = () => {
                             animate="visible"
                             exit="exit"
                         >
-                            Glen21 is recognised as an agency which exceeds it’s clients’ expectations with use of the best in supporting stakeholders, partners and suppliers.
+                            Over the years, Glen21 Entertainment has garnered a reputation for bringing internationally renowned artists to the African continent. Whether through their exclusive productions or in partnership with multinational brands, Glen21 has consistently delivered exceptional events featuring top-tier talent. The agency's success is due in part to its collaborative approach, working closely with industry-leading suppliers and stakeholders to ensure every event is executed flawlessly.
                         </MotionText>
                         <Grid gridTemplateColumns = "1fr 1fr">
                             <MotionGridItem 

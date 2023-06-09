@@ -201,7 +201,7 @@ const UpcomingEventsTile = () => {
       
      
   return (
-    <Box paddingX={{ base:"0.25rem", md:"0.25rem", lg:"2rem", xl:"2rem"}} marginY="6rem">
+    <Box paddingX={{ base:"0.25rem", md:"0.25rem", lg:"2rem", xl:"2rem"}} marginY="6rem" display= {{ base:"none", sm:"none",   md:"none", lg:"block", xl:"block" }}>
         <MotionHeading 
           variant="h3" 
           as="h3" 
@@ -270,11 +270,13 @@ const UpcomingEventsTile = () => {
                               Purchase Tickets
                             </Button>
                           </Link>
-                          <Button 
-                            sx={buttonStyle}
-                          >
-                            Playlist
-                          </Button>
+                          <Link isExternal href="https://music.apple.com/za/album/ukhamba/1685664203">
+                            <Button 
+                              sx={buttonStyle}
+                            >
+                              Playlist
+                            </Button>
+                          </Link>
                         </Box>
                       </Box>
                     </Flex>
