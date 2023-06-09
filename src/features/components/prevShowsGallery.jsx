@@ -157,9 +157,9 @@ const PrevShowsGallery = ( {prevShows} ) => {
             } else if (screenWidth < breakpoints.medium) {
               return '-5300px';
             } else if (screenWidth < breakpoints.large) {
-              return '-4650px';
+              return '-4850px';
             } else {
-              return '-4650px';
+              return '-4850px';
             }
           }
 
