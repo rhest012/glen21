@@ -27,7 +27,8 @@ const UpcomingEventsTile = () => {
   }
 
   const showHeadingContainer = {
-    width:"200px",
+    width:"215px",
+    fontSize:"2.1rem",
     textAlign: "center"
   }
 
@@ -359,7 +360,7 @@ const UpcomingEventsTile = () => {
                     justifyContent="center"
                    
                   >
-                    <Heading variant="h3" sx={showHeadingContainer}>
+                    <Heading variant="h3"  sx={showHeadingContainer}>
                       Hey Neighbour
                     </Heading>
                       <MotionImage
