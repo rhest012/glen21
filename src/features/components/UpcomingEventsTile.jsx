@@ -23,7 +23,7 @@ const UpcomingEventsTile = () => {
 
   const singleShowContainer = {
     width: { base:"920px", sm:"920px", md:"1440px", lg:"1440px", xl:"1440px"},
-    marginX: { base:"2rem", sm:"2rem", md:"1440px", lg:"1440px", xl:"1440px"},
+    marginX: { base:"2rem", sm:"2rem", md:"0", lg:"0", xl:"0"},
   }
 
   const showHeadingContainer = {
