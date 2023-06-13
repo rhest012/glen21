@@ -38,7 +38,7 @@ const UpcomingEventsTile = () => {
   }
 
   const buttonStyle = {
-    backgroundColor:"#000", 
+    backgroundColor:"#000000", 
     width: { base:"8rem", sm:"8rem", md:"10rem",lg:"10rem", xl:"10rem" },
     paddingY:"1.5rem",
     border:"1px solid #000",
@@ -233,7 +233,7 @@ const UpcomingEventsTile = () => {
                             <Button
                               sx={buttonStyle}
                             >
-                              Purchase Tickets
+                              Purchase
                             </Button>
                           </Link>
                           <Link isExternal href="https://music.apple.com/za/album/ukhamba/1685664203">
@@ -285,7 +285,7 @@ const UpcomingEventsTile = () => {
                             <Button
                               sx={buttonStyle}
                             >
-                              Purchase Tickets
+                              Purchase
                             </Button>
                           </Link>
                           <Link isExternal href="https://music.apple.com/za/playlist/tamia-essentials/pl.1c127f3670d34209a8efa4143d2a427b">
@@ -337,7 +337,7 @@ const UpcomingEventsTile = () => {
                             <Button
                               sx={buttonStyle}
                             >
-                              Purchase Tickets
+                              Purchase
                             </Button>
                           </Link>
                           <Link isExternal href="https://music.apple.com/za/playlist/boyz-ii-men-essentials/pl.95bfdb84270a41509e118bb25955f0b0">
@@ -389,7 +389,7 @@ const UpcomingEventsTile = () => {
                             <Button
                               sx={buttonStyle}
                             >
-                              Purchase Tickets
+                              Purchase
                             </Button>
                           </Link>
                         </Box>
