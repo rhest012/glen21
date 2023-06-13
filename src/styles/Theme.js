@@ -25,7 +25,7 @@ const theme = extendTheme ({
             },
             h3: {
               fontWeight: 700,
-              fontSize: { base:"1.95rem", md:"2.44rem", lg:"2.44rem", xl:"2.44rem"},
+              fontSize: { base:"1.95rem", md:"2.3rem", lg:"2.3rem", xl:"2.3rem"},
               textTransform: "uppercase",
               letterSpacing: "1.5px",
               
