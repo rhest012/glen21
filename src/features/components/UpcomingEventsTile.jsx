@@ -1,4 +1,4 @@
-import { Link as ReachLink} from 'react-router-dom'
+
 import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link } from "@chakra-ui/react"
 import TamiaSquare from "../../assets/Tamia_Square.jpg"
 import HeyNeighbourPlaylist from "../../assets/upcomingEvents/playlistCovers/Hey_Neighbour.jpg"
@@ -12,7 +12,6 @@ import { motion } from 'framer-motion'
 import { gsap } from 'gsap';
 import {useRef, useEffect, useState} from 'react'
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import TamiaCover from '../../assets/upcomingEvents/TamiaCover.jpg'
 import { useInView } from 'react-intersection-observer'
 
 const UpcomingEventsTile = () => {
@@ -21,25 +20,7 @@ const UpcomingEventsTile = () => {
       borderRadius: "1rem",
       overflow: "hidden"
      }
-    
-      const topLeftBorder = {
-        height:"70px",
-        width:"70px",
-        borderLeft:"1px solid #000",
-      
-        borderTop:"1px solid #000",
-      }
-    
-      const bottomRightBorder = {
-        marginLeft:{lg:"80%", xl:"87%"},
-        marginTop:"-4%",
-        display: { base:"none", sm:"none", md:"none", lg:"block", xl:"block"},
-        position:"relative",
-        height:"70px",
-        width:"70px",
-        borderRight:"1px solid #000",
-        borderBottom:"1px solid #000",
-      }
+     
 
       const posterSize = {
         height: "550px",
