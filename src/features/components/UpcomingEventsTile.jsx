@@ -32,8 +32,8 @@ const UpcomingEventsTile = () => {
   }
 
   const posterSize = {
-    height: { base:"400px", sm:"400px", md:"400px", lg:"600px", xl:"600px" },
-    width: { base:"400px", sm:"400px", md:"400px", lg:"600px", xl:"600px" },
+    height: { base:"360px", sm:"400px", md:"400px", lg:"600px", xl:"600px" },
+    width: { base:"360px", sm:"400px", md:"400px", lg:"600px", xl:"600px" },
     borderRadius: "1rem",
   }
 
@@ -141,7 +141,7 @@ const UpcomingEventsTile = () => {
             };
       
             if (screenWidth < breakpoints.tiny) {
-              return '-3440px';
+              return '-3480px';
             } else if (screenWidth < breakpoints.small) {
               return '-3440px';
               // 1440 * 3 + 32
