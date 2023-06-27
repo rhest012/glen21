@@ -69,10 +69,6 @@ const MissionVission = () => {
         paddingBottom:"1rem"
     }
 
-    const twoColTextStyling = {
-        margin:"2rem"
-    }
-
 
     // Framer Motion 
     const MotionGridItem = motion(GridItem);
