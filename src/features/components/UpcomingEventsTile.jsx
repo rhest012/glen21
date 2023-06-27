@@ -15,20 +15,11 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { useInView } from 'react-intersection-observer'
 
 const UpcomingEventsTile = () => {
-<<<<<<< HEAD
      const imageContainer = {
       display:"inline-block",
       borderRadius: "1rem",
       overflow: "hidden"
      }
-     
-=======
-  const imageContainer = {
-    display:"inline-block",
-    borderRadius: "1rem",
-    overflow: "hidden"
-  }
->>>>>>> tests
 
   const singleShowContainer = {
     width: { base:"920px", sm:"920px", md:"1440px", lg:"1440px", xl:"1440px"},
