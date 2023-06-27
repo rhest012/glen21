@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import LocomotiveScroll from 'locomotive-scroll';
-import "locomotive-scroll/src/locomotive-scroll"
+import 'locomotive-scroll/dist/locomotive-scroll.css';
 
 const useLocoScroll = (start) => {
     useEffect(() => {
@@ -12,7 +12,6 @@ const useLocoScroll = (start) => {
             smooth: true,
             multiplier: 1,
             class: "is-reveal"
-
         })
     }, [start])
   return (
