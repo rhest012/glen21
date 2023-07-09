@@ -179,7 +179,7 @@ const UpcomingEventsTile = () => {
       };
 
       if (screenWidth < breakpoints.tiny) {
-        return "-3000px";
+        return "-2800px";
       } else if (screenWidth < breakpoints.small) {
         return "-2350px";
       } else if (screenWidth < breakpoints.medium) {
